@@ -1,0 +1,36 @@
+nav:
+  - Home: index.md
+  - 1. Game Overview:
+    - Game Summary: game-overview/summary.md
+    - Core Pillars: game-overview/core-pillars.md
+    - Game Flow: game-overview/game-flow.md
+  - 2. Setting & Narrative:
+    - World Overview: lore/index.md
+    - Alternative History: lore/alternative-history.md
+    - Three Powers Structure: lore/lore.md
+    - Timeline: lore/timeline.md
+  - 3. Core Mechanics:
+    - Resource System: game-mechanics/resource-system.md
+    - Research: game-mechanics/research-system.md
+    - Victory Conditions: game-mechanics/victory-conditions.md
+    - Wonders: game-mechanics/wonders.md
+    - Crises: game-mechanics/crises.md
+  - 4. Game Setup:
+    - Initial Setup: game-mechanics/initial-setup.md
+    - Turn Structure: game-mechanics/turn-structure.md
+  - 5. Cards:
+    - Card Mechanics: cards/mechanics.md
+    - Card Types: cards/card-types.md
+    - Technology Cards: cards/technology-cards.md
+    - Humanity Cards: cards/humanity-cards.md
+    - Reality Cards: cards/reality-cards.md
+    - Event Cards: cards/event-cards.md
+    - Card Database: cards/card-database.md
+  - 6. Factions:
+    - New Roman Empire: factions/new-roman-empire.md
+    - Frankish Union: factions/frankish-union.md
+    - Hanseatic League: factions/hanseatic-league.md
+  - 7. Characters:
+    - NRE Characters: characters/new-roman-empire-characters.md
+  - 8. Appendix:
+    - Term Glossary: appendix/glossary.md
