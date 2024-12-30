@@ -1,8 +1,30 @@
 site_name: Byzantine Protocol
+repo_url: https://github.com/somethingdarkside1/Byzantine-Protocol/
 theme:
   name: material
+    palette:
+        scheme: slate
+        primary: deep purple
+    font:
+        code: Roboto Mono
+    language: en
+    features:
+        - search.suggest
+        - search.highlight
+        - search.share
   features:
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.tracking
     - navigation.tabs
+    - navigation.path
+    - navigation.indexes 
+    - navigation.top
+    - toc.integrate
     - navigation.sections
     - navigation.expand
     - search.highlight
+plugins:
+    - search
+    - tags
