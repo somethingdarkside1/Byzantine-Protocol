@@ -5,19 +5,20 @@ repo_name: Byzantine Protocol Github
 site_author: Vitali Liouti
 theme:
   name: material
+  logo: images/logo.png
+  favicon: images/favicon.png
   palette:
     scheme: slate
   features:
     - navigation.instant
-    - navigation.instant.prefetch
     - navigation.instant.progress
     - navigation.tracking
     - navigation.tabs
     - navigation.path
     - navigation.indexes 
     - navigation.top
+    - navigation.footer
     - toc.follow
-    - toc.integrate
     - navigation.sections
     - navigation.expand
     - search.highlight
@@ -33,6 +34,21 @@ plugins:
   - table-reader
   - autolinks 
   - bootstrap-tables
+  - minify_html:
+      do_not_minify_doctype: true
+      ensure_spec_compliant_unquoted_attribute_values: true
+      keep_closing_tags: false
+      keep_html_and_head_opening_tags: false
+      keep_spaces_between_attributes: true
+      keep_comments: false
+      keep_input_type_text_attr: true
+      keep_ssi_comments: false
+      preserve_brace_template_syntax: false
+      preserve_chevron_percent_template_syntax: false
+      minify_css: true
+      minify_js: true
+      remove_bangs: false
+      remove_processing_instructions: false
 markdown_extensions:
   - admonition
   - attr_list
@@ -48,3 +64,16 @@ markdown_extensions:
   - pymdownx.snippets:
       auto_append:
         - includes/abbreviations.md
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: xxx
+    - icon: fontawesome/brands/bluesky
+      link: xxx
+    - icon: fontawesome/brands/threads
+      link: xxx
+    - icon: 
+      link: xxx
+    - icon: material/home
+      link: 
+    
