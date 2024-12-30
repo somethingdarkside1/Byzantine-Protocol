@@ -69,7 +69,6 @@
 }
 
 .md-typeset h2:hover {
-  transform: translateX(4px);
   text-shadow: 0 0 20px rgba(130, 170, 255, 0.2);
 }
 
