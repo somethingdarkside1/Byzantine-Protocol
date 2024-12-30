@@ -89,9 +89,6 @@ extra:
       link: https://www.instagram.com/thev1tali/
     - icon: material/home
       link: https://v1tali.com/
-watch:
-  - docs
-  - docs/includes
 nav:
   - Home: index.md
   - Game Overview:
