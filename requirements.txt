@@ -18,7 +18,7 @@ mkdocs-bootstrap-tables-plugin
 mkdocs-table-reader-plugin==3.1.0
 mkdocs-enumerate-headings-plugin==0.6.2
 mkdocs-awesome-pages-plugin==2.10.1
-mkdocs-autolinks-plugin
+mkdocs-autorefs
 mkdocs-meta-descriptions-plugin
 packaging==24.2
 mkdocs-glightbox
