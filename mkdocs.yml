@@ -27,7 +27,6 @@ extra_css:
   - includes/extra.css
 plugins:
   - search
-  - meta
   - social
   - privacy
   - tags
