@@ -85,9 +85,10 @@ nav:
     - Wonders: game-mechanics/wonders.md
     - Crises: game-mechanics/crises.md
   - 4. Game Setup:
-    - Initial Setup: game-mechanics/initial-setup.md
-    - Turn Structure: game-mechanics/turn-structure.md
+    - game-setup/index.md
+    - Turn Structure: game-setup/turn-structure.md
   - 5. Cards:
+    - cards/index.md
     - Card Mechanics: cards/mechanics.md
     - Card Types: cards/card-types.md
     - Technology Cards: cards/technology-cards.md
@@ -96,10 +97,12 @@ nav:
     - Event Cards: cards/event-cards.md
     - Card Database: cards/card-database.md
   - 6. Factions:
+    - factions/index.md
     - New Roman Empire: factions/new-roman-empire.md
     - Frankish Union: factions/frankish-union.md
     - Hanseatic League: factions/hanseatic-league.md
   - 7. Characters:
+    - characters/index.md
     - NRE Characters: characters/new-roman-empire-characters.md
   - 8. Appendix:
     - Term Glossary: appendix/glossary.md
