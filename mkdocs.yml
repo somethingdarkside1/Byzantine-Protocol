@@ -5,8 +5,8 @@ repo_name: Official Github
 site_author: Vitali Liouti
 theme:
   name: material
-  logo: images/logo.svg
-  favicon: images/logo.svg
+  logo: images/logo2.svg
+  favicon: images/logo2.svg
   palette:
     scheme: slate
   features:
