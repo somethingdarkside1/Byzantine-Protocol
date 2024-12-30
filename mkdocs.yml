@@ -88,7 +88,7 @@ extra:
     - icon: material/home
       link: https://v1tali.com/
 nav:
-  - Home: index.md
+  - Home: home.md
   - Game Overview:
     - game-overview/index.md
     - Game Summary: game-overview/summary.md
@@ -124,7 +124,7 @@ nav:
     - Frankish Union: factions/frankish-union.md
     - Hanseatic League: factions/hanseatic-league.md
   - Characters:
-    - characters/index.md
+    - characters/characters.md
     - NRE Characters: characters/new-roman-empire-characters.md
   - Appendix:
     - Term Glossary: appendix/glossary.md

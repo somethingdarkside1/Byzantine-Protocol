@@ -1,6 +1,9 @@
 nav:
-  - Game Overview:
-    - game-overview/index.md
-    - Game Summary: game-overview/summary.md
-    - Core Pillars: game-overview/core-pillars.md
-    - Game Flow: game-overview/game-flow.md
+  - Home:
+    - home.md
+    - Game Summary: game-overview/index.md
+    - Game Mechanics: game-mechanics/index.md
+	- Game Setup: game-setup/index.md
+	- Lore: lore/index.md
+	- Factions: factions/index.md
+	- Characters: factions/characters.md
