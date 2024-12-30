@@ -32,14 +32,7 @@ extra_css:
 plugins:
   - search
   - social
-  - enumerate-headings:
-      toc_depth: 0
-      strict: true
-      increment_across_pages: true
-      include:
-        - "*"
-      exclude:
-        - index.md
+  - enumerate-headings
   - awesome-pages:
       filename: .index
       collapse_single_pages: true
@@ -49,25 +42,9 @@ plugins:
       order_by: title
       ignore_case: true
   - tags
-  - glightbox:
-      touchNavigation: true
-      loop: false
-      effect: fade
-      slide_effect: fade
-      width: auto
-      height: auto
-      zoomable: false
-      draggable: true
-      skip_classes:
-        - custom-skip-class-name
-      auto_caption: false
-      caption_position: bottom
-      background: black
-      shadow: true
-      manual: false
+  - glightbox
   - table-reader
-  - autorefs:
-    resolve_closest: true
+  - autorefs
   - bootstrap-tables
 markdown_extensions:
   - admonition
