@@ -17,6 +17,7 @@ theme:
     - navigation.path
     - awesome-pages
     - meta-descriptions
+    - glightbox
     - navigation.indexes 
     - navigation.top
     - navigation.footer

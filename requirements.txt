@@ -21,6 +21,7 @@ mkdocs-awesome-pages-plugin==2.10.1
 mkdocs-autolinks-plugin==0.7.2
 mkdocs-meta-descriptions-plugin
 packaging==24.2
+mkdocs-glightbox==0.4.0
 paginate==0.5.7
 pathspec==0.12.1
 platformdirs==4.3.6
