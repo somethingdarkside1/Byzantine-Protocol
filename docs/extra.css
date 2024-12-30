@@ -1,4 +1,5 @@
-/* Elegant Dark Theme for Material for MkDocs */
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Major+Mono+Display&display=swap');
 
 /* ===========================================================
    Core Theme Overrides - Colors and Typography
@@ -36,34 +37,16 @@
 }
 
 /* ===========================================================
-   Typography Enhancements
+   Typography Setup
    =========================================================== */
 
-/* Import Major Pro Sans font */
-@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
-
 :root {
-  /* Modern, premium font stack */
+  /* Modern font stack */
   --md-text-font: "Inter", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-}
-
-/* Byzantine Protocol Customization */
-.md-header__topic:first-child {
-  font-family: "Major Mono Display", monospace;
-  font-size: 1.1rem;
-  letter-spacing: 0.02em;
-  font-weight: 400;
-}
-
-/* Hide the Byzantine Protocol icon */
-.md-header__button.md-logo {
-  display: none;
-}
-  /* Ligature-enabled monospace fonts */
   --md-code-font: "JetBrains Mono", "Fira Code", "SF Mono", SFMono-Regular, ui-monospace, Menlo, Monaco, "Cascadia Mono", monospace;
 }
 
-/* Enhance overall typography */
+/* Base Typography Enhancement */
 .md-typeset {
   font-size: 0.75rem;
   line-height: 1.6;
@@ -71,7 +54,7 @@
   text-rendering: optimizeLegibility;
 }
 
-/* Refined headings */
+/* Heading Refinements */
 .md-typeset h1 {
   font-weight: 600;
   letter-spacing: -0.02em;
@@ -82,36 +65,173 @@
   font-weight: 600;
   letter-spacing: -0.01em;
   color: #F1F5F9;
+  transition: transform 0.2s ease, text-shadow 0.2s ease;
+}
+
+.md-typeset h2:hover {
+  transform: translateX(4px);
+  text-shadow: 0 0 20px rgba(130, 170, 255, 0.2);
 }
 
 /* ===========================================================
-   Navigation Enhancements
+   Navigation and Header
    =========================================================== */
 
-/* Elegant navigation styling */
+/* Byzantine Protocol Title Customization */
+.md-header__topic:first-child {
+  font-family: "Major Mono Display", monospace;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+  font-weight: 400;
+}
+
+/* Hide Byzantine Protocol icon */
+.md-header__button.md-logo {
+  display: none;
+}
+
+/* Navigation Links */
 .md-nav__link {
-  transition: all 0.3s ease;
-  border-left: 2px solid transparent;
-  margin-left: -2px;
+  transition: color 0.2s ease;
+  position: relative;
 }
 
 .md-nav__link:hover {
   color: var(--md-accent-fg-color);
-  border-left-color: var(--md-accent-fg-color);
-  padding-left: 0.5rem;
 }
 
-/* Active link indicator */
+.md-nav__link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--md-accent-fg-color);
+  transition: width 0.2s ease;
+}
+
+.md-nav__link:hover::after {
+  width: 100%;
+}
+
+/* Active link styling */
 .md-nav__link--active {
   color: var(--md-accent-fg-color);
   font-weight: 600;
 }
 
+/* Tab Navigation */
+.md-tabs__link {
+  position: relative;
+  overflow: hidden;
+}
+
+.md-tabs__link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--md-accent-fg-color);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.md-tabs__link:hover::after,
+.md-tabs__link--active::after {
+  transform: translateX(0);
+}
+
 /* ===========================================================
-   Content Enhancement
+   Search Enhancement
    =========================================================== */
 
-/* Elegant code blocks */
+.md-search__inner {
+  border-radius: 12px;
+  background-color: #1A1C23;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.md-search__form {
+  border-radius: 8px;
+  background-color: rgba(130, 170, 255, 0.05);
+  backdrop-filter: blur(4px);
+  transition: background-color 0.2s ease;
+}
+
+.md-search__form:hover {
+  background-color: rgba(130, 170, 255, 0.08);
+}
+
+.md-search__form:focus-within {
+  background-color: rgba(130, 170, 255, 0.1);
+}
+
+.md-search__input {
+  font-size: 0.9rem;
+  color: #E2E8F0;
+  transition: all 0.2s ease;
+}
+
+.md-search__input::placeholder {
+  color: rgba(203, 213, 225, 0.5);
+  transition: color 0.2s ease;
+}
+
+.md-search__input:focus::placeholder {
+  color: rgba(203, 213, 225, 0.7);
+}
+
+/* Search Results */
+.md-search-result {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.md-search-result__meta {
+  background-color: rgba(130, 170, 255, 0.05);
+  padding: 0.6rem 1rem;
+  font-size: 0.8rem;
+}
+
+.md-search-result__item {
+  transition: background-color 0.2s ease;
+}
+
+.md-search-result__item:hover {
+  background-color: rgba(130, 170, 255, 0.05);
+}
+
+.md-search-result__link {
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+/* ===========================================================
+   Content Styling
+   =========================================================== */
+
+/* Page Transitions */
+.md-content {
+  animation: fadeSlideIn 0.3s ease-out;
+}
+
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Code Blocks */
 .md-typeset pre > code {
   border-radius: 8px;
   padding: 1.2em 1.4em;
@@ -121,15 +241,33 @@
               0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
-/* Inline code styling */
-.md-typeset code {
-  border-radius: 4px;
-  padding: 0.2em 0.5em;
-  background-color: rgba(130, 170, 255, 0.1);
-  font-size: 0.95em;
+.highlight code {
+  position: relative;
+  background: linear-gradient(
+    45deg,
+    rgba(130, 170, 255, 0.05) 0%,
+    rgba(130, 170, 255, 0.01) 100%
+  );
 }
 
-/* Beautiful admonitions */
+/* Copy Button */
+.md-clipboard {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.2s ease;
+}
+
+.md-clipboard:hover {
+  background-color: rgba(130, 170, 255, 0.1);
+  transform: scale(1.05);
+}
+
+pre:hover .md-clipboard {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Admonitions */
 .md-typeset .admonition,
 .md-typeset details {
   border: none;
@@ -146,7 +284,15 @@
               0 3px 6px -1px rgba(0, 0, 0, 0.09);
 }
 
-/* Enhanced tables */
+.md-typeset .admonition-title::before {
+  transition: transform 0.3s ease;
+}
+
+.md-typeset .admonition:hover .admonition-title::before {
+  transform: rotate(360deg);
+}
+
+/* Tables */
 .md-typeset table:not([class]) {
   background-color: var(--md-default-bg-color);
   border-radius: 8px;
@@ -160,115 +306,77 @@
   color: #F8FAFC;
 }
 
+.md-typeset table:not([class]) tr {
+  transition: background-color 0.2s ease;
+  border-left: 2px solid transparent;
+}
+
 .md-typeset table:not([class]) tr:hover {
   background-color: rgba(130, 170, 255, 0.05);
+  border-left-color: var(--md-accent-fg-color);
+}
+
+/* Images */
+.md-typeset img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.md-typeset img:hover {
+  transform: scale(1.01);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Blockquotes */
+.md-typeset blockquote {
+  border-left: 2px solid var(--md-accent-fg-color);
+  background: linear-gradient(
+    to right,
+    rgba(130, 170, 255, 0.05) 0%,
+    transparent 100%
+  );
+  transition: all 0.2s ease;
+}
+
+.md-typeset blockquote:hover {
+  border-left-width: 3px;
+  background: linear-gradient(
+    to right,
+    rgba(130, 170, 255, 0.08) 0%,
+    transparent 100%
+  );
 }
 
 /* ===========================================================
-   Search Enhancement
+   Utility Styles
    =========================================================== */
 
-/* Elegant search modal */
-.md-search__inner {
-  border-radius: 8px;
-  background-color: #1A1C23;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
 }
 
-.md-search__input {
-  background-color: rgba(130, 170, 255, 0.1);
-  border-radius: 4px;
-}
-
-.md-search__input::placeholder {
-  color: rgba(203, 213, 225, 0.6);
-}
-
-/* ===========================================================
-   Header and Navigation Tabs
-   =========================================================== */
-
-/* Refined header */
-.md-header {
-  background-color: var(--md-primary-fg-color);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 
-              0 1px 2px rgba(0, 0, 0, 0.24);
-}
-
-/* Beautiful navigation tabs */
-.md-tabs {
-  background-color: var(--md-primary-fg-color--light);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
-}
-
-.md-tabs__link {
-  opacity: 0.7;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.md-tabs__link:hover {
-  opacity: 1;
-  transform: translateY(-1px);
-}
-
-.md-tabs__link--active {
-  opacity: 1;
-}
-
-/* ===========================================================
-   Scrollbar Styling
-   =========================================================== */
-
-/* Custom scrollbar for dark theme */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: rgba(130, 170, 255, 0.05);
-}
-
-::-webkit-scrollbar-thumb {
+/* Selection Styling */
+::selection {
   background: rgba(130, 170, 255, 0.2);
-  border-radius: 4px;
+  color: #fff;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(130, 170, 255, 0.3);
+/* Focus Outline */
+:focus-visible {
+  outline: 2px solid var(--md-accent-fg-color);
+  animation: outlinePulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
-/* ===========================================================
-   Footer Enhancement
-   =========================================================== */
-
-/* Elegant footer */
-.md-footer {
-  background-color: var(--md-footer-bg-color);
-  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.12);
-}
-
-.md-footer-meta {
-  background-color: var(--md-footer-bg-color--dark);
-}
-
-/* ===========================================================
-   Animation & Transitions
-   =========================================================== */
-
-/* Smooth transitions for interactive elements */
-.md-typeset a,
-.md-nav__link,
-.md-header-nav__button,
-.md-search__input {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Hover effects for links */
-.md-typeset a:hover {
-  color: var(--md-accent-fg-color);
-  text-decoration: none;
-  border-bottom: 1px dotted var(--md-accent-fg-color);
+@keyframes outlinePulse {
+  0% {
+    outline-offset: 2px;
+  }
+  50% {
+    outline-offset: 4px;
+  }
+  100% {
+    outline-offset: 2px;
+  }
 }
 
 /* ===========================================================
@@ -286,4 +394,26 @@
     color: var(--md-typeset-a-color) !important;
     text-decoration: underline;
   }
+}
+
+/* ===========================================================
+   Custom Scrollbar
+   =========================================================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(130, 170, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(130, 170, 255, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(130, 170, 255, 0.3);
 }
