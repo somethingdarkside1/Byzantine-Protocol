@@ -1,0 +1,8 @@
+site_name: Byzantine Protocol
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - search.highlight
