@@ -27,6 +27,25 @@ extra_css:
   - extra.css
 plugins:
   - search
+  - meta
+  - social
+  - privacy
+  - tags
   - table-reader
   - autolinks 
   - bootstrap-tables
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - def_list
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.blocks.caption
+  - tables
+  - footnotes
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.snippets:
+      auto_append:
+        - includes/abbreviations.md
