@@ -35,6 +35,22 @@ plugins:
   - privacy
   - enumerate-headings
   - tags
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: fade
+      slide_effect: fade
+      width: auto
+      height: auto
+      zoomable: false
+      draggable: true
+      skip_classes:
+        - custom-skip-class-name
+      auto_caption: false
+      caption_position: bottom
+      background: black
+      shadow: true
+      manual: false
   - table-reader
   - autolinks 
   - bootstrap-tables
