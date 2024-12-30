@@ -15,9 +15,7 @@ theme:
     - navigation.tracking
     - navigation.tabs
     - navigation.path
-    - awesome-pages
     - meta-descriptions
-    - glightbox
     - navigation.indexes 
     - navigation.top
     - navigation.footer
@@ -33,14 +31,7 @@ plugins:
   - search
   - social
   - enumerate-headings
-  - awesome-pages:
-      filename: .index
-      collapse_single_pages: true
-      strict: false
-      order: asc
-      sort_type: natural
-      order_by: title
-      ignore_case: true
+  - awesome-pages
   - tags
   - glightbox
   - table-reader
@@ -106,6 +97,6 @@ nav:
     - Frankish Union: factions/frankish-union.md
     - Hanseatic League: factions/hanseatic-league.md
   - 7. Characters:
-    - New Roman Empire: factions/new-roman-empire.md
+    - NRE Characters: characters/new-roman-empire-characters.md
   - 8. Appendix:
-    - Term Glossary: appendix/card-database.md
+    - Term Glossary: appendix/glossary.md
