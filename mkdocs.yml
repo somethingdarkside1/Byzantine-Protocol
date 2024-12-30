@@ -67,11 +67,12 @@ extra:
 nav:
   - Home: index.md
   - 1. Game Overview:
+    - game-overview/index.md
     - Game Summary: game-overview/summary.md
     - Core Pillars: game-overview/core-pillars.md
     - Game Flow: game-overview/game-flow.md
   - 2. Setting & Narrative:
-    - World Overview: lore/index.md
+    - lore/index.md
     - Alternative History: lore/alternative-history.md
     - Three Powers Structure: lore/lore.md
     - Timeline: lore/timeline.md
