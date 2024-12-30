@@ -90,7 +90,8 @@ extra:
     - icon: material/home
       link: https://v1tali.com/
 nav:
-  - Home: index.md
+  - Home:
+    - /index.md
     - Game Overview: game-overview/index.md
     - Setting & Narrative: lore/index.md
   - Game Overview:
