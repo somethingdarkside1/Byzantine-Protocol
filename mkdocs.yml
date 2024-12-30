@@ -12,14 +12,6 @@ theme:
     scheme: slate
     primary: purple
     accent: pink
-    - scheme: default
-      toggle:
-        icon: material/brightness-7 
-        name: Switch to dark mode
-    - scheme: slate
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
   features:
     - navigation.instant
     - navigation.instant.progress
@@ -47,14 +39,14 @@ plugins:
   - table-reader
   - bootstrap-tables
   - enumerate-headings:
-      toc_depth: 0
-      strict: false
-      increment_across_pages: true
-      include:
-        - "*"
-      exclude:
-        - index.md
-        - home.md
+    toc_depth: 0
+    strict: false
+    increment_across_pages: true
+    include:
+      - "*"
+    exclude:
+      - index.md
+      - home.md
 markdown_extensions:
   - admonition
   - attr_list
