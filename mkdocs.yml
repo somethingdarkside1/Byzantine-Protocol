@@ -2,6 +2,8 @@ site_name: Byzantine Protocol
 repo_url: https://github.com/somethingdarkside1/Byzantine-Protocol/
 theme:
   name: material
+  palette:
+    scheme: slate
   features:
     - navigation.instant
     - navigation.instant.prefetch
