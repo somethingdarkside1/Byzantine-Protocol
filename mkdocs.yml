@@ -31,15 +31,13 @@ theme:
     - search.suggest
     - search.share
 extra_css:
-  - includes/extra.css
+  - other/extra.css
 plugins:
   - search
   - social
   - tags
   - autorefs
-  - glightbox
   - table-reader
-  - bootstrap-tables
   - enumerate-headings:
       toc_depth: 0
       strict: false
@@ -49,21 +47,15 @@ plugins:
       exclude:
         - index.md
         - home.md
-  - minify_html:
-      do_not_minify_doctype: true
-      ensure_spec_compliant_unquoted_attribute_values: true
-      keep_closing_tags: true
-      keep_html_and_head_opening_tags: false
-      keep_spaces_between_attributes: true
-      keep_comments: false
-      keep_input_type_text_attr: true
-      keep_ssi_comments: false
-      preserve_brace_template_syntax: false
-      preserve_chevron_percent_template_syntax: false
-      minify_css: true
-      minify_js: true
-      remove_bangs: false
-      remove_processing_instructions: false
+    - minify:
+        minify_html: true
+        minify_js: true
+        minify_css: true
+        htmlmin_opts:
+          remove_comments: true
+        cache_safe: true
+        css_files:
+          - other/extra.css
 markdown_extensions:
   - admonition
   - attr_list
@@ -97,16 +89,6 @@ extra:
       link: https://www.instagram.com/thev1tali/
     - icon: material/home
       link: https://v1tali.com/
-  alternate:
-    - name: English
-      link: /en/ 
-      lang: en
-    - name: French
-      link: /fr/
-      lang: fr
-    - name: Deutsch
-      link: /de/
-      lang: de
 watch:
   - docs
   - docs/includes

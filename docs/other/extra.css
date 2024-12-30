@@ -88,7 +88,6 @@
 /* Navigation Links */
 .md-nav__link {
   transition: color 0.2s ease;
-  border-left: 2px solid transparent;
 }
 
 .md-nav__link:hover {
@@ -280,7 +279,6 @@ pre:hover .md-clipboard {
 
 .md-typeset table:not([class]) th {
   background-color: rgba(130, 170, 255, 0.1);
-  border-bottom: 1px solid rgba(130, 170, 255, 0.2);
   color: #F8FAFC;
 }
 
@@ -371,7 +369,6 @@ html {
   
   .md-typeset a {
   transition: color 0.2s ease, border-bottom-color 0.2s ease;
-  border-bottom: 1px solid transparent;
   }
 
   .md-typeset a:hover {
