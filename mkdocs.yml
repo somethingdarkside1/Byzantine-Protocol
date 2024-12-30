@@ -1,7 +1,7 @@
 site_name: Byzantine Protocol
 repo_url: https://github.com/somethingdarkside1/Byzantine-Protocol/
 site_url: https://byzantineprotocol.com/
-repo_name: Byzantine Protocol Github
+repo_name: Official Github
 site_author: Vitali Liouti
 theme:
   name: material

@@ -1,8 +1,10 @@
-# 1.1 Game Summary
+# Game Overview
+
+## Game Summary
 
 Trinity Protocol is a strategic card game set in an alternate 2088 where three or four major powers compete through technological advancement, cultural influence, and reality manipulation. Players take on the role of leaders from one of these powers, using resources and cards to achieve victory through various paths.
 
-# 1.2 Core Pillars
+## Core Pillars
 
 **Resource Management**
 Three primary resources drive the game:
