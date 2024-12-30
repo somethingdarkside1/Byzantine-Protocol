@@ -49,6 +49,21 @@ plugins:
       exclude:
         - index.md
         - home.md
+  - minify_html:
+      do_not_minify_doctype: true
+      ensure_spec_compliant_unquoted_attribute_values: true
+      keep_closing_tags: false
+      keep_html_and_head_opening_tags: false
+      keep_spaces_between_attributes: true
+      keep_comments: false
+      keep_input_type_text_attr: true
+      keep_ssi_comments: false
+      preserve_brace_template_syntax: false
+      preserve_chevron_percent_template_syntax: false
+      minify_css: true
+      minify_js: true
+      remove_bangs: false
+      remove_processing_instructions: false
 markdown_extensions:
   - admonition
   - attr_list
