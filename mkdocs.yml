@@ -2,6 +2,7 @@ site_name: BYZANTINE PROTOCOL
 repo_url: https://github.com/somethingdarkside1/Byzantine-Protocol/
 site_url: https://byzantineprotocol.com/
 repo_name: Official Github
+copyright: Copyright &copy; 2025 Vitali Liouti
 site_author: Vitali Liouti
 theme:
   name: material
@@ -9,6 +10,21 @@ theme:
   favicon: images/logo2.svg
   palette:
     scheme: slate
+  palette:
+    primary: purple
+    accent: pink
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+
+
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
   features:
     - navigation.instant
     - navigation.instant.progress
@@ -53,15 +69,19 @@ markdown_extensions:
       permalink: true
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.betterem
+  - pymdownx.smartsymbols
   - pymdownx.blocks.caption
   - tables
   - footnotes
   - pymdownx.tasklist:
       custom_checkbox: true
+      clickable_checkbox: false
   - pymdownx.snippets:
       auto_append:
         - includes/abbreviations.md
 extra:
+  generator: false
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/somethingdarkside1/Byzantine-Protocol/
@@ -73,6 +93,19 @@ extra:
       link: https://www.instagram.com/thev1tali/
     - icon: material/home
       link: https://v1tali.com/
+  alternate:
+    - name: English
+      link: /en/ 
+      lang: en
+    - name: French
+      link: /fr/
+      lang: fr
+    - name: Deutch
+      link: /de/
+      lang: de
+watch:
+  - docs
+  - docs/includes
 nav:
   - Home: index.md
   - Game Overview:
