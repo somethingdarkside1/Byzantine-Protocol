@@ -24,7 +24,7 @@ theme:
     - search.suggest
     - search.share
 extra_css:
-  - extra.css
+  - includes/extra.css
 plugins:
   - search
   - meta
