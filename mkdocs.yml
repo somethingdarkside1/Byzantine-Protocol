@@ -31,7 +31,6 @@ plugins:
   - search
   - social
   - tags
-  - awesome-pages
   - autorefs
   - glightbox
   - table-reader
@@ -77,6 +76,7 @@ nav:
     - Three Powers Structure: lore/lore.md
     - Timeline: lore/timeline.md
   - 3. Core Mechanics:
+    - core-mechanics/index.md
     - Resource System: game-mechanics/resource-system.md
     - Research: game-mechanics/research-system.md
     - Victory Conditions: game-mechanics/victory-conditions.md
