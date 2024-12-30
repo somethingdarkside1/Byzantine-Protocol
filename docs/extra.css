@@ -1,0 +1,272 @@
+/* Elegant Dark Theme for Material for MkDocs */
+
+/* ===========================================================
+   Core Theme Overrides - Colors and Typography
+   =========================================================== */
+
+[data-md-color-scheme="slate"] {
+  /* Refined dark mode color palette with elegant blue accents */
+  --md-primary-fg-color: #1E2029;
+  --md-primary-fg-color--light: #2A2C3C;
+  --md-primary-fg-color--dark: #16171D;
+  --md-accent-fg-color: #82AAFF;
+  --md-accent-fg-color--transparent: rgba(130, 170, 255, 0.1);
+  
+  /* Rich, deep background colors */
+  --md-default-bg-color: #14151A;
+  --md-default-bg-color--light: rgba(20, 21, 26, 0.54);
+  --md-default-bg-color--lighter: rgba(20, 21, 26, 0.26);
+  --md-default-bg-color--lightest: rgba(20, 21, 26, 0.07);
+
+  /* Elegant text colors with perfect contrast */
+  --md-typeset-color: #CBD5E1;
+  --md-typeset-a-color: #82AAFF;
+  
+  /* Refined code colors for better readability */
+  --md-code-fg-color: #E2E8F0;
+  --md-code-bg-color: #1A1C23;
+  --md-code-hl-color: rgba(130, 170, 255, 0.15);
+  
+  /* Table colors */
+  --md-typeset-table-color: rgba(130, 170, 255, 0.15);
+  
+  /* Footer colors */
+  --md-footer-bg-color: #16171D;
+  --md-footer-bg-color--dark: #12131A;
+}
+
+/* ===========================================================
+   Typography Enhancements
+   =========================================================== */
+
+:root {
+  /* Modern, premium font stack */
+  --md-text-font: "Inter", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  /* Ligature-enabled monospace fonts */
+  --md-code-font: "JetBrains Mono", "Fira Code", "SF Mono", SFMono-Regular, ui-monospace, Menlo, Monaco, "Cascadia Mono", monospace;
+}
+
+/* Enhance overall typography */
+.md-typeset {
+  font-size: 0.75rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Refined headings */
+.md-typeset h1 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #F8FAFC;
+}
+
+.md-typeset h2 {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: #F1F5F9;
+}
+
+/* ===========================================================
+   Navigation Enhancements
+   =========================================================== */
+
+/* Elegant navigation styling */
+.md-nav__link {
+  transition: all 0.3s ease;
+  border-left: 2px solid transparent;
+  margin-left: -2px;
+}
+
+.md-nav__link:hover {
+  color: var(--md-accent-fg-color);
+  border-left-color: var(--md-accent-fg-color);
+  padding-left: 0.5rem;
+}
+
+/* Active link indicator */
+.md-nav__link--active {
+  color: var(--md-accent-fg-color);
+  font-weight: 600;
+}
+
+/* ===========================================================
+   Content Enhancement
+   =========================================================== */
+
+/* Elegant code blocks */
+.md-typeset pre > code {
+  border-radius: 8px;
+  padding: 1.2em 1.4em;
+  background-color: #1A1C23;
+  border: 1px solid rgba(130, 170, 255, 0.1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
+              0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Inline code styling */
+.md-typeset code {
+  border-radius: 4px;
+  padding: 0.2em 0.5em;
+  background-color: rgba(130, 170, 255, 0.1);
+  font-size: 0.95em;
+}
+
+/* Beautiful admonitions */
+.md-typeset .admonition,
+.md-typeset details {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+              0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.md-typeset .admonition:hover,
+.md-typeset details:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px -1px rgba(0, 0, 0, 0.15),
+              0 3px 6px -1px rgba(0, 0, 0, 0.09);
+}
+
+/* Enhanced tables */
+.md-typeset table:not([class]) {
+  background-color: var(--md-default-bg-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(130, 170, 255, 0.1);
+}
+
+.md-typeset table:not([class]) th {
+  background-color: rgba(130, 170, 255, 0.1);
+  border-bottom: 1px solid rgba(130, 170, 255, 0.2);
+  color: #F8FAFC;
+}
+
+.md-typeset table:not([class]) tr:hover {
+  background-color: rgba(130, 170, 255, 0.05);
+}
+
+/* ===========================================================
+   Search Enhancement
+   =========================================================== */
+
+/* Elegant search modal */
+.md-search__inner {
+  border-radius: 8px;
+  background-color: #1A1C23;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.md-search__input {
+  background-color: rgba(130, 170, 255, 0.1);
+  border-radius: 4px;
+}
+
+.md-search__input::placeholder {
+  color: rgba(203, 213, 225, 0.6);
+}
+
+/* ===========================================================
+   Header and Navigation Tabs
+   =========================================================== */
+
+/* Refined header */
+.md-header {
+  background-color: var(--md-primary-fg-color);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 
+              0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+/* Beautiful navigation tabs */
+.md-tabs {
+  background-color: var(--md-primary-fg-color--light);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.md-tabs__link {
+  opacity: 0.7;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.md-tabs__link:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.md-tabs__link--active {
+  opacity: 1;
+}
+
+/* ===========================================================
+   Scrollbar Styling
+   =========================================================== */
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(130, 170, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(130, 170, 255, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(130, 170, 255, 0.3);
+}
+
+/* ===========================================================
+   Footer Enhancement
+   =========================================================== */
+
+/* Elegant footer */
+.md-footer {
+  background-color: var(--md-footer-bg-color);
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.md-footer-meta {
+  background-color: var(--md-footer-bg-color--dark);
+}
+
+/* ===========================================================
+   Animation & Transitions
+   =========================================================== */
+
+/* Smooth transitions for interactive elements */
+.md-typeset a,
+.md-nav__link,
+.md-header-nav__button,
+.md-search__input {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hover effects for links */
+.md-typeset a:hover {
+  color: var(--md-accent-fg-color);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--md-accent-fg-color);
+}
+
+/* ===========================================================
+   Print Optimization
+   =========================================================== */
+
+@media print {
+  [data-md-color-scheme="slate"] {
+    --md-default-bg-color: #ffffff;
+    --md-default-fg-color: #000000;
+    --md-typeset-a-color: #0056b3;
+  }
+  
+  .md-typeset a {
+    color: var(--md-typeset-a-color) !important;
+    text-decoration: underline;
+  }
+}
