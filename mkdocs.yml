@@ -2,6 +2,8 @@ site_name: BYZANTINE PROTOCOL
 repo_url: https://github.com/somethingdarkside1/Byzantine-Protocol/
 site_url: https://byzantineprotocol.com/
 repo_name: Official Github
+site_description: The official site of the Byzantine Protocol RPG game
+docs_dir: docs
 copyright: Copyright &copy; 2025 Vitali Liouti
 site_author: Vitali Liouti
 theme:
@@ -39,14 +41,14 @@ plugins:
   - table-reader
   - bootstrap-tables
   - enumerate-headings:
-    toc_depth: 0
-    strict: false
-    increment_across_pages: true
-    include:
-      - "*"
-    exclude:
-      - index.md
-      - home.md
+      toc_depth: 0
+      strict: false
+      increment_across_pages: true
+      include:
+        - "*"
+      exclude:
+        - index.md
+        - home.md
 markdown_extensions:
   - admonition
   - attr_list
@@ -87,7 +89,7 @@ extra:
     - name: French
       link: /fr/
       lang: fr
-    - name: Deutch
+    - name: Deutsch
       link: /de/
       lang: de
 watch:
@@ -106,7 +108,7 @@ nav:
     - Three Powers Structure: lore/lore.md
     - Timeline: lore/timeline.md
   - Core Mechanics:
-    - core-mechanics/index.md
+    - game-mechanics/index.md
     - Resource System: game-mechanics/resource-system.md
     - Research: game-mechanics/research-system.md
     - Victory Conditions: game-mechanics/victory-conditions.md
