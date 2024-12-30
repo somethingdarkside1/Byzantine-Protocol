@@ -1,5 +1,7 @@
 site_name: Byzantine Protocol
 repo_url: https://github.com/somethingdarkside1/Byzantine-Protocol/
+repo_name: Byzantine Protocol Github
+site_author: Vitali Liouti
 theme:
   name: material
   palette:
@@ -38,3 +40,6 @@ plugins:
       css_files:
           - my/css/dir/file1.css
           - my/css/dir/file2.css
+nav:
+  - 'index.md'
+  - 'about.md'
