@@ -501,7 +501,7 @@ html {
 
 /* Active state */
 .md-nav--secondary .md-nav__link--active {
-  color: var(--md-accent-fg-color);
+  color: var(--md-accent-fg-color); 
   /* Optional: add a subtle left border */
   border-left: 2px solid var(--md-accent-fg-color);
   /* Adjust padding to compensate for border */
