@@ -5,8 +5,8 @@ A card RPG of technological advancement, cultural power, and reality-shaping amb
 
 In 2088, three ancient powers compete not through warfare, but through technological supremacy, cultural dominance, and the race for space. As quantum computing warps reality, living cities grow toward the stars, and humanity's consciousness expands beyond its limits, you'll navigate a world where the future and past collide. Choose your path:
 
-* Master reality-bending quantum technology with the [New Roman Empire].
-* Shape evolution and living cities with the [Frankish Union]
+* Master reality-bending quantum technology with the [New Roman Empire](new-roman-empire.md).
+* Shape evolution and living cities with the [Frankish Union](frankish-union.md)
 * Pioneer space and robotics with the [Hanseatic League]
 * Or forge your own destiny in the independent zones 
 
