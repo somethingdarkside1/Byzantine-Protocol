@@ -10,17 +10,12 @@ theme:
   favicon: images/logo2.svg
   palette:
     scheme: slate
-  palette:
     primary: purple
     accent: pink
     - scheme: default
       toggle:
         icon: material/brightness-7 
-
-
         name: Switch to dark mode
-
-    # Palette toggle for dark mode
     - scheme: slate
       toggle:
         icon: material/brightness-4
