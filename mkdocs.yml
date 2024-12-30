@@ -47,15 +47,15 @@ plugins:
       exclude:
         - index.md
         - home.md
-    - minify:
-        minify_html: true
-        minify_js: true
-        minify_css: true
-        htmlmin_opts:
-          remove_comments: true
-        cache_safe: true
-        css_files:
-          - other/extra.css
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+        remove_comments: true
+      cache_safe: true
+      css_files:
+        - other/extra.css
 markdown_extensions:
   - admonition
   - attr_list
