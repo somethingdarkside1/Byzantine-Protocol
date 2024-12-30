@@ -85,10 +85,6 @@
   font-weight: 400;
 }
 
-/* Hide Byzantine Protocol icon */
-.md-header__button.md-logo {
-  display: none;
-}
 
 /* Navigation Links */
 .md-nav__link {
