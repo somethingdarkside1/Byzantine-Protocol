@@ -10,19 +10,19 @@ In 2088, three ancient powers compete not through warfare, but through technolog
 * Pioneer space and robotics with the [Hanseatic League]
 * Or forge your own destiny in the independent zones 
 
-# Key Sections
-**I. Game Overview**
+## Key Sections
+### [Game Overview](game-overview.md)
   *   Game Summary
   *   Core Pillars
   *   Game Flow
 
-**II. Setting & Narrative**
+### II. Setting & Narrative**
   *   [World Overview]
   *   [Alternative History]
   *   [Three Powers Structure]
   *   [Technological State]
 
-**III. Dinamis Magnae**
+### III. Dinamis Magnae**
   *   [New Roman Empire]
   *   [Frankish Union]
   *   [Hanseatic League]

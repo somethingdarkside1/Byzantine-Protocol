@@ -16,20 +16,17 @@ theme:
     accent: pink
   features:
     - navigation.instant
-    - navigation.instant.progress
     - navigation.tracking
     - navigation.tabs
-    - navigation.path
-    - meta-descriptions
     - navigation.indexes 
     - navigation.top
     - navigation.footer
-    - toc.follow
     - navigation.sections
-    - navigation.expand
     - search.highlight
     - search.suggest
     - search.share
+    - toc.follow
+    - meta-descriptions
 extra_css:
   - other/extra.css
 plugins:
