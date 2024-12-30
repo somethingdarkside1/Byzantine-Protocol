@@ -1,4 +1,6 @@
 site_name: Byzantine Protocol
+site_author: Vitali Liouti
+site_url: https://byzantineprotocol.com/
 repo_url: https://github.com/somethingdarkside1/Byzantine-Protocol/
 theme:
   name: material
