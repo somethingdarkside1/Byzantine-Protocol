@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <path d="M50 20 L20 60 L50 80 L80 60 L50 20" fill="black"/>
+  <path d="M20 30 L35 30 L20 50 L20 30" fill="black"/>
+  <path d="M80 30 L65 30 L80 50 L80 30" fill="black"/>
+  <rect x="15" y="15" width="10" height="10" transform="rotate(45 20 20)" fill="black"/>
+  <rect x="75" y="15" width="10" height="10" transform="rotate(45 80 20)" fill="black"/>
+  <rect x="45" y="5" width="10" height="10" transform="rotate(45 50 10)" fill="black"/>
+</svg>

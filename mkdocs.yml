@@ -5,8 +5,8 @@ repo_name: Byzantine Protocol Github
 site_author: Vitali Liouti
 theme:
   name: material
-  logo: images/logo.png
-  favicon: images/favicon.png
+  logo: images/logo.svg
+  favicon: images/logo.svg
   palette:
     scheme: slate
   features:
