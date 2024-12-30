@@ -17,6 +17,6 @@ theme:
     - search.highlight
     - search.suggest
     - search.share
-  plugins:
+plugins:
     - search
     - tags
