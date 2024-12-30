@@ -30,13 +30,13 @@ extra_css:
 plugins:
   - search
   - social
-  - enumerate-headings
-  - awesome-pages
   - tags
+  - awesome-pages
+  - autorefs
   - glightbox
   - table-reader
-  - autorefs
   - bootstrap-tables
+  - enumerate-headings
 markdown_extensions:
   - admonition
   - attr_list
