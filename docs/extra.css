@@ -93,11 +93,24 @@
 /* Navigation Links */
 .md-nav__link {
   transition: color 0.2s ease;
-  position: relative;
+  border-left: 2px solid transparent;
 }
 
 .md-nav__link:hover {
   color: var(--md-accent-fg-color);
+  border-left-color: var(--md-accent-fg-color);
+  /* No movement, just color and border changes */
+}
+
+.md-header {
+  background-color: rgba(30, 32, 41, 0.95);
+  backdrop-filter: blur(8px);
+}
+
+/* Improve header shadow */
+.md-header--shadow {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1),
+              0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 .md-nav__link::after {
@@ -148,18 +161,18 @@
    Search Enhancement
    =========================================================== */
 
+
 .md-search__inner {
   border-radius: 12px;
   background-color: #1A1C23;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(8px);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  /* Remove backdrop-filter and transform transitions */
 }
 
 .md-search__form {
   border-radius: 8px;
   background-color: rgba(130, 170, 255, 0.05);
-  backdrop-filter: blur(4px);
+  /* Remove backdrop-filter */
   transition: background-color 0.2s ease;
 }
 
@@ -169,45 +182,12 @@
 
 .md-search__form:focus-within {
   background-color: rgba(130, 170, 255, 0.1);
+  /* Add subtle border glow */
+  box-shadow: 0 0 0 1px rgba(130, 170, 255, 0.2);
 }
 
-.md-search__input {
-  font-size: 0.9rem;
-  color: #E2E8F0;
-  transition: all 0.2s ease;
-}
-
-.md-search__input::placeholder {
-  color: rgba(203, 213, 225, 0.5);
-  transition: color 0.2s ease;
-}
-
-.md-search__input:focus::placeholder {
-  color: rgba(203, 213, 225, 0.7);
-}
-
-/* Search Results */
-.md-search-result {
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.md-search-result__meta {
-  background-color: rgba(130, 170, 255, 0.05);
-  padding: 0.6rem 1rem;
-  font-size: 0.8rem;
-}
-
+/* Remove any transform animations from search results */
 .md-search-result__item {
-  transition: background-color 0.2s ease;
-}
-
-.md-search-result__item:hover {
-  background-color: rgba(130, 170, 255, 0.05);
-}
-
-.md-search-result__link {
-  border-radius: 4px;
   transition: background-color 0.2s ease;
 }
 
@@ -234,11 +214,13 @@
 /* Code Blocks */
 .md-typeset pre > code {
   border-radius: 8px;
-  padding: 1.2em 1.4em;
-  background-color: #1A1C23;
   border: 1px solid rgba(130, 170, 255, 0.1);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
-              0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  /* Remove transform animations */
+  background: linear-gradient(
+    to bottom,
+    rgba(130, 170, 255, 0.05),
+    rgba(130, 170, 255, 0.02)
+  );
 }
 
 .highlight code {
@@ -252,14 +234,14 @@
 
 /* Copy Button */
 .md-clipboard {
-  opacity: 0;
-  transform: scale(0.95);
-  transition: all 0.2s ease;
+  opacity: 0.7;
+  /* Remove transform */
+  transition: opacity 0.2s ease, background-color 0.2s ease;
 }
 
 .md-clipboard:hover {
+  opacity: 1;
   background-color: rgba(130, 170, 255, 0.1);
-  transform: scale(1.05);
 }
 
 pre:hover .md-clipboard {
@@ -279,9 +261,11 @@ pre:hover .md-clipboard {
 
 .md-typeset .admonition:hover,
 .md-typeset details:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 8px -1px rgba(0, 0, 0, 0.15),
-              0 3px 6px -1px rgba(0, 0, 0, 0.09);
+  /* Remove transform */
+  transform: none;
+  /* Subtle border glow instead */
+  box-shadow: 0 0 0 1px rgba(130, 170, 255, 0.2),
+              0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
 .md-typeset .admonition-title::before {
@@ -293,11 +277,10 @@ pre:hover .md-clipboard {
 }
 
 /* Tables */
-.md-typeset table:not([class]) {
-  background-color: var(--md-default-bg-color);
-  border-radius: 8px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(130, 170, 255, 0.1);
+.md-typeset table:not([class]) tr:hover {
+  background-color: rgba(130, 170, 255, 0.03);
+  /* Add subtle left border */
+  border-left: 2px solid rgba(130, 170, 255, 0.3);
 }
 
 .md-typeset table:not([class]) th {
@@ -357,14 +340,15 @@ html {
 
 /* Selection Styling */
 ::selection {
-  background: rgba(130, 170, 255, 0.2);
+  background: rgba(130, 170, 255, 0.15);
   color: #fff;
 }
 
 /* Focus Outline */
 :focus-visible {
-  outline: 2px solid var(--md-accent-fg-color);
-  animation: outlinePulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  outline: 2px solid rgba(130, 170, 255, 0.5);
+  outline-offset: 2px;
+  /* Remove pulse animation for cleaner look */
 }
 
 @keyframes outlinePulse {
@@ -391,8 +375,13 @@ html {
   }
   
   .md-typeset a {
-    color: var(--md-typeset-a-color) !important;
-    text-decoration: underline;
+  transition: color 0.2s ease, border-bottom-color 0.2s ease;
+  border-bottom: 1px solid transparent;
+  }
+
+  .md-typeset a:hover {
+  color: var(--md-accent-fg-color);
+  border-bottom-color: currentColor;
   }
 }
 
