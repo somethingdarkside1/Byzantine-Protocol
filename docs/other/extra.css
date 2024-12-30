@@ -380,26 +380,12 @@ html {
    Experimental cool effects
    =========================================================== */
 
-.md-nav__item--section > .md-nav__link {
-  background: linear-gradient(to right, transparent 50%, rgba(130, 170, 255, 0.05) 50%);
-  background-size: 200% 100%;
-  transition: background-position 0.3s ease;
-}
-
-.md-nav__item--section > .md-nav__link:hover {
-  background-position: -100% 0;
-}
-
 .highlight .hll {
   background: linear-gradient(to right,
     rgba(130, 170, 255, 0.1) 0%,
     rgba(130, 170, 255, 0.05) 100%
   );
   border-left: 2px solid var(--md-accent-fg-color);
-}
-
-.md-header__content {
-  transition: transform 0.3s ease;
 }
 
 .md-tabs__link {
