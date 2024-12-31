@@ -34,9 +34,9 @@ plugins:
   - search
   - social
   - tags
-  - autorefs
+  - literate-nav:
+      nav_file: SUMMARY.md
   - table-reader
-  - awesome-pages
   - enumerate-headings:
       toc_depth: 0
       strict: false
@@ -44,7 +44,6 @@ plugins:
       include:
         - "*"
       exclude:
-        - index.md
         - home.md
   - minify:
       minify_html: true
@@ -74,7 +73,7 @@ markdown_extensions:
       clickable_checkbox: false
   - pymdownx.snippets:
       auto_append:
-        - includes/abbreviations.md
+        - other/abbreviations.md
 extra:
   generator: false
   social:
