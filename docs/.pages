@@ -4,7 +4,7 @@ nav:
     - Game Summary: game-overview/
     - Game Mechanics: game-mechanics/
     - Game Setup: game-setup/
-  - Cards: cards/cards-index.md
+  - Cards: cards/
   - Lore: lore/lore-index.md
   - Factions: factions/factions-index.md
   - Characters: characters/characters.md
