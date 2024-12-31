@@ -35,7 +35,7 @@ plugins:
   - social
   - tags
   - literate-nav:
-      nav_file: SUMMARY.md
+      nav_file: .pages
   - table-reader
   - enumerate-headings:
       toc_depth: 0
