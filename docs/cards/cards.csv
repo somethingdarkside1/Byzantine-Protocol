@@ -1,0 +1,38 @@
+﻿,,,,,,,,,,,,
+#,ID,Domain,Category,Type,Card Name,Cost,Cost Type,Secondary Cost,Secondary Cost Type,Requirements,Primary Effect,Combo Effect
+1,TQ1,Technology Domain,A. Quantum Technologies,Basic Technology,Quantum Processor,,,,,,Generate +1 TP per turn,+1 TP when paired with other quantum tech
+2,TQ2,Technology Domain,A. Quantum Technologies,Basic Technology,Quantum Network,,,,,,Draw 1 extra card when activating quantum tech,Reduce cost of next quantum tech by 1
+3,TQ3,Technology Domain,A. Quantum Technologies,Basic Technology,Reality Calculator,,,,,,"Look at top 3 cards, rearrange them",Draw 1 when paired with Quantum Processor
+4,TQ4,Technology Domain,A. Quantum Technologies,Basic Technology,Quantum Encryption,,,,,,Protect one technology from disruption,Can protect two technologies if paired
+5,TQ5,Technology Domain,A. Quantum Technologies,Basic Technology,Probability Engine,,,,,,Reroll any single game effect once per turn,Can be used twice if paired with quantum tech
+6,TQ6,Technology Domain,A. Quantum Technologies,Basic Technology,Quantum Storage,,,,,,Store up to 2 TP for future turns,+1 storage capacity with quantum tech
+7,TQ7,Technology Domain,A. Quantum Technologies,Advanced Technology,Reality Manipulator,,,,,Own 2 basic quantum tech,Copy any basic quantum tech effect,Can copy two effects if fully powered
+8,TQ8,Technology Domain,A. Quantum Technologies,Advanced Technology,Quantum Supercomputer,,,,,Quantum Processoror Neural Network,Automate one basic tech per turn,Enhance all quantum tech outputs by 1
+9,TQ9,Technology Domain,A. Quantum Technologies,Advanced Technology,Timeline Splitter,,,,,Reality Calculator,Play two cards for the cost of one once per turn,Generate 1 TP when splitting
+10,TQ10,Technology Domain,A. Quantum Technologies,Advanced Technology,Quantum Gateway,,,,,Any 2 basic quantum tech,Search deck for any quantum tech,Reduce its cost by 2
+11,TQ11,Technology Domain,A. Quantum Technologies,Ultimate Technology,Time Matrix,,,,,Reality Manipulator,Take an extra turn after this one,Generate 2 TP on extra turn
+12,TQ12,Technology Domain,A. Quantum Technologies,Ultimate Technology,Reality Engine,,,,,Any 2 advanced quantum tech,Use any quantum effect without paying costs,Generate 1 TP when copying
+13,TB1,Technology Domain,B. Biological Systems,Basic Technology,Gene Sequencer,,,,,,Generate 1 TP and 1 CP per turn,+1 CP when paired with bio-tech
+14,TB2,Technology Domain,B. Biological Systems,Basic Technology,Living Laboratory,,,,,,Reduce cost of next bio-tech by 1,Draw card when playing bio-tech
+15,TB3,Technology Domain,B. Biological Systems,Basic Technology,Synthetic Cell Factory,,,,,,Store up to 3 CP for future turns,+1 storage with bio-tech
+16,TB4,Technology Domain,B. Biological Systems,Basic Technology,Neural Enhancer,,,,,,Look at opponent's top card once per turn,Can look at two cards if paired
+17,TB5,Technology Domain,B. Biological Systems,Basic Technology,Environmental Harmonizer,,,,,,Convert 1 TP to 2 CP once per turn,No conversion cost if paired
+18,TB6,Technology Domain,B. Biological Systems,Basic Technology,Protein Assembler,,,,,,Generate 1 CP for each bio-tech,Protect bio-tech from crisis events
+19,TB7,Technology Domain,B. Biological Systems,Advanced Technology,,,,,,Any 2 basic bio-tech,Upgrade one bio-tech for free each turn,Draw card when upgrading
+20,TB8,Technology Domain,B. Biological Systems,Advanced Technology,Living City Core,,,,,Environmental Harmonizer,Double all CP generation,Reduce all bio-tech costs by 1
+21,TB9,Technology Domain,B. Biological Systems,Advanced Technology,Hive Mind Matrix,,,,,Neural Enhancer,Copy another player's bio-tech effect,Generate 1 CP when copying
+22,TB10,Technology Domain,B. Biological Systems,Advanced Technology,Genesis Engine,,,,,Synthetic Cell Factory,Create basic bio-tech copy each turn,Copies generate +1 resource
+23,TB11,Technology Domain,B. Biological Systems,Ultimate Technology,Living Planet,,,,,Living City Core,Triple all CP generation,All bio-tech effects trigger twice
+24,TB12,Technology Domain,B. Biological Systems,Ultimate Technology,Evolution Transcendence,,,,,Evolution Chamber,Transform any tech into upgraded bio-tech,Transformed tech costs no upkeep
+25,TA1,Technology Domain,C. AI Networks,Basic Technology,Neural Network,,,,,,Draw extra card each turn,Filter through 2 cards if paired
+26,TA2,Technology Domain,C. AI Networks,Basic Technology,AGI Assistant,,,,,,Use one extra action per turn,Generate 1 TP if paired
+27,TA3,Technology Domain,C. AI Networks,Basic Technology,Data Nexus,,,,,,See top card of each deck,Rearrange seen cards if paired
+28,TA4,Technology Domain,C. AI Networks,Basic Technology,Machine Learning Core,,,,,,Copy one basic tech effect per turn,Generate 1 TP when copying
+29,TA5,Technology Domain,C. AI Networks,Basic Technology,,,,,,,,
+30,TA6,Technology Domain,C. AI Networks,Basic Technology,,,,,,,,
+31,TA7,Technology Domain,C. AI Networks,Advanced Technology,Digital Consciousness,,,,,Neural Network + any AI tech,"Play with revealed hand, draw extra card each turn",Reduce all AI tech costs by 1
+32,TA8,Technology Domain,C. AI Networks,Advanced Technology,Predictive Engine,,,,,Machine Learning Core,Look at top 3 cards of any deck; play one for free,Generate 2 TP when predicting correctly
+33,TA9,Technology Domain,C. AI Networks,Advanced Technology,Distributed Intelligence,,,,,Data Nexus,Use any other player's basic tech effects,Generate 1 TP for each borrowed effect
+34,TA10,Technology Domain,C. AI Networks,Advanced Technology,,,,,,,,
+35,TA11,Technology Domain,C. AI Networks,Ultimate Technology,Singularity Core,,,,,Digital Consciousness,Take control of all AI effects in play,Generate 1 TP for each controlled effect
+36,TA12,Technology Domain,C. AI Networks,Ultimate Technology,,,,,,,,
