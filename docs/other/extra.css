@@ -84,16 +84,6 @@
 }
 
 
-/* Navigation Links */
-.md-nav__link {
-  transition: color 0.2s ease;
-}
-
-.md-nav__link:hover {
-  color: var(--md-accent-fg-color);
-  border-left-color: var(--md-accent-fg-color);
-  /* No movement, just color and border changes */
-}
 
 .md-header {
   background-color: rgba(30, 32, 41, 0.95);
@@ -106,26 +96,8 @@
               0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
-.md-nav__link::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 1px;
-  bottom: 0;
-  left: 0;
-  background-color: var(--md-accent-fg-color);
-  transition: width 0.2s ease;
-}
 
-.md-nav__link:hover::after {
-  width: 100%;
-}
 
-/* Active link styling */
-.md-nav__link--active {
-  color: var(--md-accent-fg-color);
-  font-weight: 600;
-}
 
 /* Tab Navigation */
 .md-tabs__link {
@@ -436,33 +408,12 @@ html {
   padding-left: 0;
 }
 
-.md-nav--secondary .md-nav__link {
-  margin-top: .625em;
-  padding-left: 0;
-  color: var(--md-default-fg-color--light);
-  /* Remove any background gradients */
-  background: none;
-  /* Remove border */
-  border: none;
-  /* Ensure consistent indentation */
-  padding-left: 1rem;
-  /* Smooth transition for color only */
-  transition: color 0.2s ease;
-}
 
-/* Hover state */
-.md-nav--secondary .md-nav__link:hover {
-  color: var(--md-accent-fg-color);
-}
+
+
 
 /* Active state */
-.md-nav--secondary .md-nav__link--active {
-  color: var(--md-accent-fg-color); 
-  /* Optional: add a subtle left border */
-  border-left: 2px solid var(--md-accent-fg-color);
-  /* Adjust padding to compensate for border */
-  padding-left: calc(1rem - 2px);
-}
+
 
 /* Ensure nested items are properly indented */
 .md-nav--secondary .md-nav__item .md-nav__item {
