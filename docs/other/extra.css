@@ -234,7 +234,7 @@
     120deg,
     rgba(255, 255, 255, 1) 0%,
     rgba(255, 255, 255, 0.5) 50%,
-    var(--md-accent-fg-color) 100%
+    rgba(255, 255, 255, 1)  100%
   );
   background-size: 200% auto;
   -webkit-background-clip: text;
