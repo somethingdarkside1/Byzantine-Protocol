@@ -1,163 +1,239 @@
 /* ==========================================================================
-   Byzantine Protocol - Enhanced Theme with Elegant Hover Effects
+   Byzantine Protocol - Complete Theme with Fixed Navigation
    ========================================================================== */
 
 /* Import Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Inter:wght@400;500;600;700&display=swap');
 
-/* Core Theme Colors and Variables
-   ========================================================================== */
+/* Core Theme Colors and Variables */
 [data-md-color-scheme="slate"] {
-  --md-primary-fg-color: #1E2029;
-  --md-primary-fg-color--light: #2A2C3C;
-  --md-primary-fg-color--dark: #16171D;
-  --md-accent-fg-color: #82AAFF;
-  --md-accent-fg-color--transparent: rgba(130, 170, 255, 0.1);
-  --md-default-bg-color: #14151A;
-  --md-typeset-color: #CBD5E1;
-  
-  /* Hover effect colors */
-  --hover-accent-glow: rgba(130, 170, 255, 0.15);
-  --hover-bg-subtle: rgba(130, 170, 255, 0.05);
-  --hover-bg-medium: rgba(130, 170, 255, 0.08);
-}
-
-[data-md-color-scheme="slate"] {
-  --md-primary-fg-color: #0c0c1d;  /* Darker background */
+  --md-primary-fg-color: #0c0c1d;
   --md-primary-fg-color--light: #1a1a2f;
   --md-primary-fg-color--dark: #08080f;
   --md-accent-fg-color: #82AAFF;
   --md-accent-fg-color--transparent: rgba(130, 170, 255, 0.1);
-  --md-default-bg-color: #0c0c1d;  /* Matching canvas background */
+  --md-default-bg-color: #0c0c1d;
   --md-default-bg-color--light: rgba(12, 12, 29, 0.54);
-  --md-default-bg-color--lighter: rgba(12, 12, 29, 0.26);
-  --md-default-bg-color--lightest: rgba(12, 12, 29, 0.07);
-  
-  /* Improved contrast for text */
   --md-typeset-color: #E1E7F0;
-  --md-typeset-a-color: #82AAFF;
-
-  /* Adjusted code colors for better contrast */
-  --md-code-fg-color: #E8F0FF;
-  --md-code-bg-color: rgba(18, 19, 30, 0.7);
   
-  /* Custom effect colors */
-  --hover-accent-glow: rgba(130, 170, 255, 0.15);
-  --hover-bg-subtle: rgba(130, 170, 255, 0.05);
-  --hover-bg-medium: rgba(130, 170, 255, 0.08);
+  /* Navigation Colors */
+  --nav-item-color: rgba(225, 231, 240, 0.7);
+  --nav-item-hover-bg: rgba(130, 170, 255, 0.04);
+  --nav-item-active-bg: rgba(130, 170, 255, 0.08);
+  
+  /* Menu Colors */
+  --menu-active-bg: rgba(130, 170, 255, 0.1);
+  --menu-hover-bg: rgba(130, 170, 255, 0.15);
 }
 
-/* Content container transparency */
-.md-main {
-  background-color: rgba(12, 12, 29, 0.7);
-  backdrop-filter: blur(10px);
+/* Typography Setup */
+:root {
+  --md-text-font: "Inter", -apple-system, system-ui, sans-serif;
+  --md-code-font: "JetBrains Mono", monospace;
 }
 
-/* Header transparency */
-.md-header {
-  background-color: rgba(12, 12, 29, 0.8);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(130, 170, 255, 0.1);
-}
+/* Navigation Fixes
+   ========================================================================== */
 
-/* Navigation transparency */
+/* Base Navigation Styling */
 .md-nav {
-  background-color: transparent;
+  background: transparent;
 }
 
-/* Tabs transparency */
+.md-nav__list {
+  background: transparent;
+}
+
+/* Navigation Links - Base Style */
+.md-nav__link {
+  color: var(--nav-item-color);
+  padding: 0.4rem 0.8rem;
+  margin: 0.2rem 0;
+  border-radius: 4px;
+  background: transparent;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  font-weight: 400;
+}
+
+/* Remove nested padding that causes asymmetry */
+.md-nav__item--nested .md-nav__link {
+  padding-left: 0.8rem !important;
+}
+
+/* Hover Effect */
+.md-nav__link:hover {
+  color: var(--md-accent-fg-color);
+  background: var(--nav-item-hover-bg);
+}
+
+/* Active State */
+.md-nav__link--active {
+  color: var(--md-accent-fg-color) !important;
+  background: var(--nav-item-active-bg);
+  font-weight: 500;
+}
+
+/* Table of Contents
+   ========================================================================== */
+
+.md-nav--secondary {
+  padding: 0;
+}
+
+.md-nav--secondary .md-nav__title {
+  color: rgba(225, 231, 240, 0.85);
+  font-weight: 500;
+  padding: 0;
+  margin-bottom: 1rem;
+  background: transparent !important;
+  box-shadow: none;
+}
+
+.md-nav--secondary .md-nav__link {
+  color: var(--nav-item-color);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0.4rem 0.8rem;
+  margin: 0.2rem 0;
+  border-radius: 4px;
+}
+
+.md-nav--secondary .md-nav__link:hover {
+  color: var(--md-accent-fg-color);
+  background: var(--nav-item-hover-bg);
+  transform: translateX(2px);
+}
+
+/* Top Navigation Menu
+   ========================================================================== */
+
+.md-tabs__link {
+  opacity: 0.7;
+  transition: opacity 0.2s ease, color 0.2s ease;
+  margin: 0 0.5rem;
+  padding: 0.8rem 0.2rem;
+  position: relative;
+}
+
+.md-tabs__link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--md-accent-fg-color);
+  transform: scaleX(0);
+  transition: transform 0.2s ease;
+}
+
+.md-tabs__link:hover {
+  opacity: 1;
+  color: var(--md-accent-fg-color);
+}
+
+.md-tabs__link:hover::after {
+  transform: scaleX(1);
+}
+
+.md-tabs__link--active {
+  opacity: 1;
+}
+
+.md-tabs__link--active::after {
+  transform: scaleX(1);
+}
+
+/* Header Styling
+   ========================================================================== */
+
+.md-header {
+  background-color: rgba(12, 12, 29, 0.95);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 1px 0 rgba(130, 170, 255, 0.05);
+  border-bottom: 1px solid rgba(130, 170, 255, 0.05);
+}
+
+.md-header__title {
+  font-family: "Major Mono Display", monospace;
+}
+
+/* Tabs Background */
 .md-tabs {
   background-color: rgba(26, 26, 47, 0.7);
   backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(130, 170, 255, 0.05);
 }
 
-/* Search modal adjustments */
-.md-search__inner {
-  background-color: rgba(12, 12, 29, 0.95);
-  backdrop-filter: blur(16px);
-}
+/* Content Styling
+   ========================================================================== */
 
-.md-search__form {
-  background-color: rgba(130, 170, 255, 0.05);
-}
-
-/* Code blocks with transparency */
-.md-typeset pre > code {
-  background-color: rgba(18, 19, 30, 0.7);
-  backdrop-filter: blur(8px);
-}
-
-/* Table adjustments */
-.md-typeset table:not([class]) {
-  background-color: rgba(18, 19, 30, 0.7);
-  backdrop-filter: blur(8px);
-}
-
-.md-typeset table:not([class]) th {
-  background-color: rgba(130, 170, 255, 0.08);
-}
-
-/* Admonition adjustments */
-.md-typeset .admonition {
-  background-color: rgba(18, 19, 30, 0.7);
-  backdrop-filter: blur(8px);
-}
-
-/* Footer adjustments */
-.md-footer {
-  background-color: rgba(12, 12, 29, 0.9);
-  backdrop-filter: blur(12px);
-}
-
-.md-footer-meta {
-  background-color: rgba(8, 8, 15, 0.9);
-}
-
-/* Sidebar adjustments */
-.md-sidebar {
-  background-color: transparent;
-}
-
-.md-sidebar__scrollwrap {
-  background-color: transparent;
-}
-
-/* Navigation item hover effects */
-.md-nav__link:hover {
-  color: var(--md-accent-fg-color);
-  text-shadow: 0 0 8px rgba(130, 170, 255, 0.3);
-}
-
-/* Enhanced link hover effect */
+/* Links */
 .md-content__inner a:not(.md-button) {
-  position: relative;
+  color: var(--md-accent-fg-color);
   text-decoration: none;
-  background: linear-gradient(
-    to right,
-    var(--md-accent-fg-color) 0%,
-    var(--md-accent-fg-color) 50%,
-    transparent 50%
-  );
-  background-size: 200% 1px;
-  background-position: 100% 100%;
-  background-repeat: no-repeat;
   transition: all 0.2s ease;
+  position: relative;
+}
+
+.md-content__inner a:not(.md-button)::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--md-accent-fg-color);
+  transform: scaleX(0);
+  transition: transform 0.2s ease;
+  transform-origin: right;
 }
 
 .md-content__inner a:not(.md-button):hover {
   color: var(--md-accent-fg-color);
-  text-shadow: 0 0 8px rgba(130, 170, 255, 0.3);
-  background-position: 0% 100%;
 }
 
-/* Glow effect for active elements */
-.md-nav__link--active,
-.md-tabs__link--active {
-  color: var(--md-accent-fg-color) !important;
-  text-shadow: 0 0 8px rgba(130, 170, 255, 0.3);
+.md-content__inner a:not(.md-button):hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
-/* Enhanced scrollbar */
+/* Code Blocks */
+.md-typeset pre > code {
+  border-radius: 6px;
+  background-color: rgba(18, 19, 30, 0.7);
+  border: 1px solid rgba(130, 170, 255, 0.1);
+}
+
+/* Tables */
+.md-typeset table:not([class]) {
+  background-color: rgba(18, 19, 30, 0.7);
+  border-radius: 6px;
+  border: 1px solid rgba(130, 170, 255, 0.1);
+}
+
+.md-typeset table:not([class]) th {
+  background-color: rgba(130, 170, 255, 0.08);
+  border-bottom: 1px solid rgba(130, 170, 255, 0.1);
+}
+
+/* Nested Navigation
+   ========================================================================== */
+
+.md-nav__item--nested > .md-nav {
+  margin-left: 0.8rem;
+  padding-left: 0.8rem;
+  border-left: 1px solid rgba(130, 170, 255, 0.1);
+}
+
+/* Remove shadows and outlines */
+.md-nav__title,
+.md-nav__link {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Scrollbar Styling */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -170,497 +246,38 @@
 ::-webkit-scrollbar-thumb {
   background: rgba(130, 170, 255, 0.2);
   border-radius: 3px;
+  transition: background 0.2s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(130, 170, 255, 0.3);
 }
 
-/* Selection color */
-::selection {
-  background: rgba(130, 170, 255, 0.25);
-  color: #fff;
-}
-
-/* Focus outline */
-:focus-visible {
-  outline: 2px solid rgba(130, 170, 255, 0.5);
-  outline-offset: 2px;
-}
-
-/* Byzantine Protocol title effect */
-.md-header__topic:first-child {
-  font-family: "Major Mono Display", monospace;
-  background: linear-gradient(
-    135deg,
-    #82AAFF 0%,
-    #5E8AE0 50%,
-    #82AAFF 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 15px rgba(130, 170, 255, 0.3);
-}
-
-/* Particle canvas styling */
-#particleCanvas {
-  opacity: 0.8;
-  filter: saturate(1.2) brightness(0.95);
-}
-
-/* Typography
+/* Search Styling
    ========================================================================== */
-:root {
-  --md-text-font: "Inter", -apple-system, system-ui, sans-serif;
-  --md-code-font: "JetBrains Mono", monospace;
+
+.md-search__inner {
+  background-color: rgba(12, 12, 29, 0.95);
+  backdrop-filter: blur(16px);
 }
 
-/* Byzantine Protocol Header
-   ========================================================================== */
-.md-header {
-  background-color: rgba(30, 32, 41, 0.97);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(130, 170, 255, 0.05);
-}
-
-.md-header__title {
-  font-family: "Major Mono Display", monospace;
-}
-
-/* Title gradient effect */
-.md-header__topic:first-child {
-  background: linear-gradient(
-    120deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 0.5) 50%,
-    rgba(255, 255, 255, 1)  100%
-  );
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
-  transition: background-position 0.3s ease;
-}
-
-.md-header__title:hover .md-header__topic:first-child {
-  background-position: right center;
-}
-
-/* Navigation Links
-   ========================================================================== */
-/* Primary Navigation */
-.md-nav__link {
-  position: relative;
-  transition: color 0.2s ease;
-  padding: 0.3rem 0.6rem;
-  border-radius: 4px;
-}
-
-/* Elegant hover effect */
-.md-nav__link::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 4px;
-  background: radial-gradient(
-    circle at var(--x, 50%) var(--y, 50%),
-    var(--hover-accent-glow) 0%,
-    transparent 100%
-  );
-  opacity: 0;
-  transition: opacity 0.2s ease;
-}
-
-.md-nav__link:hover::before {
-  opacity: 1;
-}
-
-/* Active link state */
-.md-nav__link--active {
-  color: var(--md-accent-fg-color);
-  background-color: var(--hover-bg-subtle);
-}
-
-/* Section Headers */
-.md-nav__item--section > .md-nav__link {
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Section header hover effect */
-.md-nav__item--section > .md-nav__link::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 1px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    var(--md-accent-fg-color) 50%,
-    transparent
-  );
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
-}
-
-.md-nav__item--section > .md-nav__link:hover::after {
-  transform: scaleX(1);
-}
-
-/* Content Links
-   ========================================================================== */
-.md-content__inner a:not(.md-button) {
-  position: relative;
-  color: var(--md-accent-fg-color);
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-/* Underline effect */
-.md-content__inner a:not(.md-button)::after {
-  content: '';
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background: linear-gradient(
-    to right,
-    var(--md-accent-fg-color),
-    rgba(130, 170, 255, 0.5)
-  );
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.3s ease;
-}
-
-.md-content__inner a:not(.md-button):hover::after {
-  transform: scaleX(1);
-  transform-origin: left;
-}
-
-/* Table of Contents
-   ========================================================================== */
-.md-nav--secondary .md-nav__link {
-  color: var(--md-typeset-color);
-  transition: color 0.2s ease, background-color 0.2s ease;
-  border-left: 2px solid transparent;
-  margin: 0.2rem 0;
-  padding: 0.2rem 0.8rem;
-}
-
-.md-nav--secondary .md-nav__link:hover {
-  color: var(--md-accent-fg-color);
-  background-color: var(--hover-bg-subtle);
-  border-left-color: var(--md-accent-fg-color);
-}
-
-/* Code Blocks
-   ========================================================================== */
-.highlight {
-  position: relative;
-  border-radius: 6px;
-  background: linear-gradient(
-    135deg,
-    var(--hover-bg-subtle) 0%,
-    transparent 100%
-  );
-  border: 1px solid rgba(130, 170, 255, 0.1);
-}
-
-/* Code block hover effect */
-.highlight::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 6px;
-  padding: 1px;
-  background: linear-gradient(
-    135deg,
-    var(--md-accent-fg-color) 0%,
-    transparent 50%
-  );
-  mask: linear-gradient(#fff 0 0) content-box, 
-        linear-gradient(#fff 0 0);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, 
-                linear-gradient(#fff 0 0);
-  mask-composite: xor;
-  -webkit-mask-composite: xor;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.highlight:hover::before {
-  opacity: 0.3;
-}
-
-/* Copy Button */
-.md-clipboard {
-  opacity: 0.5;
-  transition: opacity 0.2s ease, background-color 0.2s ease;
-  border-radius: 4px;
-}
-
-.md-clipboard:hover {
-  opacity: 1;
-  background-color: var(--hover-bg-medium);
-}
-
-/* Tables
-   ========================================================================== */
-.md-typeset table:not([class]) {
-  background: linear-gradient(
-    to bottom,
-    var(--hover-bg-subtle),
-    transparent
-  );
-  border: 1px solid rgba(130, 170, 255, 0.1);
-  border-radius: 6px;
-  overflow: hidden;
-}
-
-.md-typeset table:not([class]) th {
-  background-color: var(--hover-bg-medium);
-  border-bottom: 1px solid rgba(130, 170, 255, 0.1);
-}
-
-.md-typeset table:not([class]) tr {
-  transition: background-color 0.2s ease;
-}
-
-.md-typeset table:not([class]) tr:hover {
-  background-color: var(--hover-bg-subtle);
-}
-
-/* Search
-   ========================================================================== */
 .md-search__form {
-  background-color: var(--hover-bg-subtle);
-  border-radius: 6px;
-  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  background-color: rgba(130, 170, 255, 0.05);
+  transition: background-color 0.2s ease;
 }
 
 .md-search__form:hover {
-  background-color: var(--hover-bg-medium);
+  background-color: rgba(130, 170, 255, 0.08);
 }
 
-.md-search__form:focus-within {
-  background-color: var(--hover-bg-medium);
-  box-shadow: inset 0 0 0 1px rgba(130, 170, 255, 0.2);
-}
-
-.md-search__input {
-  color: var(--md-typeset-color);
-  transition: color 0.2s ease;
-}
-
-.md-search__input::placeholder {
-  color: rgba(203, 213, 225, 0.4);
-  transition: color 0.2s ease;
-}
-
-.md-search__input:focus::placeholder {
-  color: rgba(203, 213, 225, 0.6);
-}
-
-/* Top Navigation Tabs
-   ========================================================================== */
-.md-tabs__link {
-  position: relative;
-  opacity: 0.7;
-  transition: opacity 0.2s ease, color 0.2s ease;
-}
-
-.md-tabs__link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    var(--md-accent-fg-color) 50%,
-    transparent
-  );
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
-}
-
-.md-tabs__link:hover {
-  opacity: 1;
-  color: var(--md-accent-fg-color);
-}
-
-.md-tabs__link:hover::after {
-  transform: scaleX(1);
-}
-
-/* Admonitions
-   ========================================================================== */
-.md-typeset .admonition {
-  border: none;
-  background: var(--hover-bg-subtle);
-  border-radius: 6px;
-  transition: box-shadow 0.3s ease;
-}
-
-.md-typeset .admonition:hover {
-  box-shadow: 0 0 0 1px rgba(130, 170, 255, 0.1),
-              0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* Icons
-   ========================================================================== */
-.md-typeset .admonition-title::before,
-.md-nav__button.md-logo img {
-  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-.md-typeset .admonition:hover .admonition-title::before,
-.md-nav__button.md-logo:hover img {
-  transform: scale(1.1);
-}
-
-/* Scrollbar Styling
-   ========================================================================== */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: rgba(130, 170, 255, 0.05);
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(130, 170, 255, 0.1);
-  border-radius: 4px;
-  transition: background-color 0.2s ease;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(130, 170, 255, 0.2);
-}
-
-/* Selection Styling
-   ========================================================================== */
+/* Selection Styling */
 ::selection {
   background: rgba(130, 170, 255, 0.2);
   color: #fff;
 }
 
-/* Focus States
-   ========================================================================== */
+/* Focus States */
 :focus-visible {
-  outline: 2px solid var(--md-accent-fg-color);
+  outline: 2px solid rgba(130, 170, 255, 0.5);
   outline-offset: 2px;
-}
-
-/* Menu and Navigation Fixes */
-
-/* Reset all navigation backgrounds */
-.md-nav {
-  background: transparent;
-}
-
-.md-nav__list {
-  background: transparent;
-}
-
-/* Base link styling */
-.md-nav__link {
-  color: rgba(225, 231, 240, 0.7);
-  padding: 4px 8px;
-  margin: 2px 0;
-  border-radius: 4px;
-  background: transparent;
-  transition: all 0.15s ease;
-}
-
-/* Hover effect */
-.md-nav__link:hover {
-  color: #82AAFF;
-  background: rgba(130, 170, 255, 0.06);
-}
-
-/* Active state */
-.md-nav__link--active {
-  color: #82AAFF !important;
-  background: rgba(130, 170, 255, 0.04);
-}
-
-/* Table of Contents specific styling */
-.md-nav--secondary {
-  padding: 0;
-  background: transparent;
-}
-
-.md-nav--secondary .md-nav__title {
-  padding: 0;
-  margin-bottom: 1rem;
-  color: rgba(225, 231, 240, 0.85);
-  font-weight: 500;
-  background: transparent !important;
-  box-shadow: none;
-}
-
-/* Remove any existing borders/gradients */
-.md-nav__link::before,
-.md-nav__link::after,
-.md-nav__title::before,
-.md-nav__title::after {
-  display: none;
-}
-
-/* Section level items (like "Game") */
-.md-nav__item--section > .md-nav__link {
-  color: rgba(225, 231, 240, 0.85);
-  font-weight: 500;
-  background: transparent;
-}
-
-.md-nav__item--section > .md-nav__link:hover {
-  color: #82AAFF;
-  background: rgba(130, 170, 255, 0.06);
-}
-
-/* Fix nested navigation */
-.md-nav__item--nested {
-  margin-left: 0;
-}
-
-.md-nav__item--nested .md-nav__link {
-  padding-left: 1.4rem;
-}
-
-/* Ensure sidebar background is transparent */
-.md-sidebar__scrollwrap {
-  background: transparent;
-}
-
-/* Improve active indicators */
-.md-nav__link--active,
-.md-nav__link:active {
-  color: #82AAFF;
-}
-
-/* Add subtle left border for hierarchy */
-.md-nav__item--nested > .md-nav {
-  border-left: 1px solid rgba(130, 170, 255, 0.1);
-  margin-left: 0.5rem;
-  padding-left: 0.5rem;
-}
-
-/* Remove any box shadows */
-.md-nav__title,
-.md-nav__link {
-  box-shadow: none !important;
 }
