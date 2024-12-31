@@ -34,5 +34,5 @@ urllib3==2.2.3
 watchdog==6.0.0
 pillow==11.0.0
 CairoSVG==2.7.1
-mkdocs-awesome-pages-plugin
 mkdocs-literate-nav
+mkdocs-section-index

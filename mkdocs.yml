@@ -34,6 +34,7 @@ plugins:
   - search
   - social
   - tags
+  - section-index
   - literate-nav:
       nav_file: summary.md
   - table-reader
