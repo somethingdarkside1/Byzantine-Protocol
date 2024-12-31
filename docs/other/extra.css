@@ -10,7 +10,7 @@
   --md-primary-fg-color: #0c0c1d;
   --md-primary-fg-color--light: #1a1a2f;
   --md-primary-fg-color--dark: #08080f;
-  --md-accent-fg-color: #82AAFF;
+  --md-accent-fg-color: #ececec;
   --md-accent-fg-color--transparent: rgba(130, 170, 255, 0.1);
   --md-default-bg-color: #060606;
   --md-default-bg-color--light: rgba(12, 12, 29, 0.54);
@@ -397,8 +397,3 @@ md-search__inner:hover {transition: all 1s ease}
   background-color: rgba(18, 19, 30, 0.95);
   backdrop-filter: blur(16px);
 }
-
-
-
-
-
