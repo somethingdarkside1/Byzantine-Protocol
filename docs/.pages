@@ -3,8 +3,8 @@ nav:
     - home.md
     - Game Summary: game-overview/index.md
     - Game Mechanics: game-mechanics/index.md
-	- Game Setup: game-setup/index.md
-	- Cards: cards/cards-index.md
-	- Lore: lore/lore-index.md
-	- Factions: factions/factions-index.md
-	- Characters: characters/characters.md
+    - Game Setup: game-setup/index.md
+    - Cards: cards/cards-index.md
+    - Lore: lore/lore-index.md
+    - Factions: factions/factions-index.md
+    - Characters: characters/characters.md
