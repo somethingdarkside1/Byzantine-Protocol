@@ -397,3 +397,5 @@ md-search__inner:hover {transition: all 1s ease}
   background-color: rgba(18, 19, 30, 0.95);
   backdrop-filter: blur(16px);
 }
+
+.md-search__overlay {background-color:#ccc;opacity:0.2;}
