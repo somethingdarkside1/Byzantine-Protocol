@@ -83,6 +83,8 @@
   font-weight: 400;
 }
 
+md-header__title,md-header__title--active {font-family: "Major Mono Display", monospace; letter-spacing: 0.02em;font-weight: 400;}
+
 
 /* Navigation Links */
 .md-nav__link {
