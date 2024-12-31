@@ -36,6 +36,7 @@ plugins:
   - tags
   - autorefs
   - table-reader
+  - awesome-pages
   - enumerate-headings:
       toc_depth: 0
       strict: false
