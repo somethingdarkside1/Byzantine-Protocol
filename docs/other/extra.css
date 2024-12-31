@@ -50,12 +50,8 @@
   padding: 0.4rem 0.8rem;
   margin: 0.2rem 0;
   border-radius: 4px;
-  background: linear-gradient(
-    120deg,
-    transparent 0%,
-    transparent 100%
-  );
-  transition: all 0.3s ease;
+  background: transparent;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   font-weight: 400;
 }
@@ -63,25 +59,14 @@
 /* Hover Effect */
 .md-nav__link:hover {
   color: var(--md-accent-fg-color);
-  background: linear-gradient(
-    120deg,
-    rgba(130, 170, 255, 0.03) 0%,
-    rgba(130, 170, 255, 0.08) 100%
-  );
+  background: var(--nav-item-hover-bg);
 }
 
 /* Active State */
 .md-nav__link--active {
   color: var(--md-accent-fg-color) !important;
   background: var(--nav-item-active-bg);
-  animation: colorPulse 3s infinite;
   font-weight: 500;
-}
-
-@keyframes colorPulse {
-  0% { background-color: rgba(130, 170, 255, 0.08); }
-  50% { background-color: rgba(130, 170, 255, 0.12); }
-  100% { background-color: rgba(130, 170, 255, 0.08); }
 }
 
 /* Table of Contents
@@ -216,13 +201,7 @@
 
 /* Tables */
 .md-typeset table:not([class]) {
-  background: linear-gradient(
-    45deg,
-    rgba(130, 170, 255, 0.08) 0%,
-    rgba(130, 170, 255, 0.08) 100%
-  );
-  background-size: 200% 200%;
-  transition: background-position 0.3s ease;
+  background-color: rgba(18, 19, 30, 0.7);
   border-radius: 6px;
   border: 1px solid rgba(130, 170, 255, 0.1);
 }
@@ -230,15 +209,6 @@
 .md-typeset table:not([class]) th {
   background-color: rgba(130, 170, 255, 0.08);
   border-bottom: 1px solid rgba(130, 170, 255, 0.1);
-}
-
-.md-typeset table:not([class]) th:hover {
-  background-position: 100% 100%;
-  background-image: linear-gradient(
-    45deg,
-    rgba(130, 170, 255, 0.08) 0%,
-    rgba(130, 170, 255, 0.15) 100%
-  );
 }
 
 /* Nested Navigation
@@ -336,8 +306,6 @@
 }
 
 
-
-
 /* Glowing active state */
 .md-nav__link--active {
   box-shadow: inset 0 0 0 1px rgba(130, 170, 255, 0.2);
@@ -421,24 +389,12 @@
   font-weight: 600;
   letter-spacing: -0.02em;
   background: linear-gradient(
-    90deg,
-    var(--md-typeset-color) 0%,
-    var(--md-typeset-color) 100%
+    45deg,
+    var(--md-typeset-color) 30%,
+    rgba(225, 231, 240, 0.8) 100%
   );
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: background-position 0.3s ease;
-  background-size: 200% auto;
-}
-
-.md-typeset h2:hover {
-  background-position: -100% center;
-  background-image: linear-gradient(
-    90deg,
-    var(--md-typeset-color) 0%,
-    var(--md-accent-fg-color) 100%
-  );
 }
 
 
@@ -461,17 +417,8 @@
   background: linear-gradient(
     135deg,
     rgba(130, 170, 255, 0.05) 0%,
-    rgba(18, 19, 30, 0.95) 50%,
-    rgba(130, 170, 255, 0.05) 100%
+    rgba(18, 19, 30, 0.95) 100%
   );
-  background-size: 400% 400%;
-  animation: gradientShift 15s ease infinite;
-}
-
-@keyframes gradientShift {
-  0% { background-position: 0% 50% }
-  50% { background-position: 100% 50% }
-  100% { background-position: 0% 50% }
 }
 
 .highlight pre {
