@@ -1,8 +1,9 @@
 nav:
   - Home: home.md
-  - Game Summary: game-overview/
-  - Game Mechanics: game-mechanics/
-  - Game Setup: game-setup/
+  - Game:
+    - Game Summary: game-overview/
+    - Game Mechanics: game-mechanics/
+    - Game Setup: game-setup/
   - Cards: cards/cards-index.md
   - Lore: lore/lore-index.md
   - Factions: factions/factions-index.md
