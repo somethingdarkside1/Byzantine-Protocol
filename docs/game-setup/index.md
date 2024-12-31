@@ -7,14 +7,14 @@ Each player:
 * Receives starting resources (2 [[TP|Technology Points]], 1 [[CP]])
 * Draws 7 cards
 
-# Play Area Setup:
+## Play Area Setup:
 
 1. `   [Wonder Zone]     [Event Zone]     [Crisis Zone]`
 2. `   [Technology Zone]     [Leader Zone]    [Culture Zone]`
 3. `   [Reality Zone]    [Resource Pool]  [Hand Cards]`
 4. `   [Advisor Zone]    [Scheme Zone]    [Development Zone]`
 
-# Advisor Selection
+## Advisor Selection
 
 Each player selects three starting [[advisors|Advisors]]:
 
