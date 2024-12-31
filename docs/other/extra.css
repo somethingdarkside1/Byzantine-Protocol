@@ -563,3 +563,104 @@
   outline: 2px solid var(--md-accent-fg-color);
   outline-offset: 2px;
 }
+
+/* Menu and Navigation Fixes */
+
+/* Reset all navigation backgrounds */
+.md-nav {
+  background: transparent;
+}
+
+.md-nav__list {
+  background: transparent;
+}
+
+/* Base link styling */
+.md-nav__link {
+  color: rgba(225, 231, 240, 0.7);
+  padding: 4px 8px;
+  margin: 2px 0;
+  border-radius: 4px;
+  background: transparent;
+  transition: all 0.15s ease;
+}
+
+/* Hover effect */
+.md-nav__link:hover {
+  color: #82AAFF;
+  background: rgba(130, 170, 255, 0.06);
+}
+
+/* Active state */
+.md-nav__link--active {
+  color: #82AAFF !important;
+  background: rgba(130, 170, 255, 0.04);
+}
+
+/* Table of Contents specific styling */
+.md-nav--secondary {
+  padding: 0;
+  background: transparent;
+}
+
+.md-nav--secondary .md-nav__title {
+  padding: 0;
+  margin-bottom: 1rem;
+  color: rgba(225, 231, 240, 0.85);
+  font-weight: 500;
+  background: transparent !important;
+  box-shadow: none;
+}
+
+/* Remove any existing borders/gradients */
+.md-nav__link::before,
+.md-nav__link::after,
+.md-nav__title::before,
+.md-nav__title::after {
+  display: none;
+}
+
+/* Section level items (like "Game") */
+.md-nav__item--section > .md-nav__link {
+  color: rgba(225, 231, 240, 0.85);
+  font-weight: 500;
+  background: transparent;
+}
+
+.md-nav__item--section > .md-nav__link:hover {
+  color: #82AAFF;
+  background: rgba(130, 170, 255, 0.06);
+}
+
+/* Fix nested navigation */
+.md-nav__item--nested {
+  margin-left: 0;
+}
+
+.md-nav__item--nested .md-nav__link {
+  padding-left: 1.4rem;
+}
+
+/* Ensure sidebar background is transparent */
+.md-sidebar__scrollwrap {
+  background: transparent;
+}
+
+/* Improve active indicators */
+.md-nav__link--active,
+.md-nav__link:active {
+  color: #82AAFF;
+}
+
+/* Add subtle left border for hierarchy */
+.md-nav__item--nested > .md-nav {
+  border-left: 1px solid rgba(130, 170, 255, 0.1);
+  margin-left: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+/* Remove any box shadows */
+.md-nav__title,
+.md-nav__link {
+  box-shadow: none !important;
+}
