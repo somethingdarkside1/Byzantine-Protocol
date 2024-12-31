@@ -45,6 +45,7 @@ plugins:
         - "*"
       exclude:
         - home.md
+        - SUMMARY.md
   - minify:
       minify_html: true
       minify_js: true
