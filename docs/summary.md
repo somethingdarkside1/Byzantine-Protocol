@@ -9,4 +9,4 @@
   * [New Roman Empire](factions/new-roman-empire.md)
   * [New Roman Empire](factions/frankish-union.md)
 * [Characters](characters/index.md)
-  * [HRE Characters](holy-roman-empire-characters.md)
+  * [HRE Characters](characters/holy-roman-empire-characters.md)
