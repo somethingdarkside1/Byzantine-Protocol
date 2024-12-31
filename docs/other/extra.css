@@ -285,6 +285,8 @@ md-search__inner:hover {transition: all 1s ease}
   outline-offset: 2px;
 }
 
+.md-typeset h1 {color: #fff}
+
 
 /* ==========================================================================
    EXPERIMENTAL
