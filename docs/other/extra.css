@@ -12,7 +12,7 @@
   --md-primary-fg-color--dark: #08080f;
   --md-accent-fg-color: #82AAFF;
   --md-accent-fg-color--transparent: rgba(130, 170, 255, 0.1);
-  --md-default-bg-color: #090909;
+  --md-default-bg-color: ;
   --md-default-bg-color--light: rgba(12, 12, 29, 0.54);
   --md-typeset-color: #E1E7F0;
   
@@ -136,8 +136,10 @@
 }
 
 .md-tabs__link--active {
-  opacity: 1;
+  opacity: 0.5;
 }
+
+.md-search__overlay { opacity: 0.1;}
 
 .md-tabs__link--active::after {
   transform: scaleX(1);
