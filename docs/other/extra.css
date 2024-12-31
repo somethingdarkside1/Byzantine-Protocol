@@ -1,202 +1,270 @@
 /* ==========================================================================
-   Elegant Dark Theme for Material for MkDocs
-   With refined menu and navigation effects
+   Byzantine Protocol - Enhanced Theme with Elegant Hover Effects
    ========================================================================== */
 
 /* Import Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Major+Mono+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Inter:wght@400;500;600;700&display=swap');
 
 /* Core Theme Colors and Variables
    ========================================================================== */
-
 [data-md-color-scheme="slate"] {
   --md-primary-fg-color: #1E2029;
   --md-primary-fg-color--light: #2A2C3C;
   --md-primary-fg-color--dark: #16171D;
   --md-accent-fg-color: #82AAFF;
   --md-accent-fg-color--transparent: rgba(130, 170, 255, 0.1);
-  
   --md-default-bg-color: #14151A;
-  --md-default-bg-color--light: rgba(20, 21, 26, 0.54);
-  --md-default-bg-color--lighter: rgba(20, 21, 26, 0.26);
-  --md-default-bg-color--lightest: rgba(20, 21, 26, 0.07);
-
   --md-typeset-color: #CBD5E1;
-  --md-typeset-a-color: #82AAFF;
   
-  --md-code-fg-color: #E2E8F0;
-  --md-code-bg-color: #1A1C23;
-  
-  /* Custom gradient colors */
-  --md-gradient-1: rgba(130, 170, 255, 0.05);
-  --md-gradient-2: rgba(130, 170, 255, 0.02);
-  --md-hover-gradient: rgba(130, 170, 255, 0.1);
+  /* Hover effect colors */
+  --hover-accent-glow: rgba(130, 170, 255, 0.15);
+  --hover-bg-subtle: rgba(130, 170, 255, 0.05);
+  --hover-bg-medium: rgba(130, 170, 255, 0.08);
 }
 
-/* Typography Setup
+/* Typography
    ========================================================================== */
-
 :root {
-  --md-text-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --md-code-font: "JetBrains Mono", "Fira Code", "SF Mono", monospace;
+  --md-text-font: "Inter", -apple-system, system-ui, sans-serif;
+  --md-code-font: "JetBrains Mono", monospace;
 }
 
-/* Navigation and Menu Effects
+/* Byzantine Protocol Header
    ========================================================================== */
-
-/* Primary Navigation */
-.md-nav--primary .md-nav__link {
-  position: relative;
-  color: var(--md-typeset-color);
-  transition: color 0.2s ease;
-  padding: 0.2rem 0;
+.md-header {
+  background-color: rgba(30, 32, 41, 0.97);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(130, 170, 255, 0.05);
 }
 
-.md-nav--primary .md-nav__link::before {
+.md-header__title {
+  font-family: "Major Mono Display", monospace;
+}
+
+/* Title gradient effect */
+.md-header__topic:first-child {
+  background: linear-gradient(
+    120deg,
+    var(--md-accent-fg-color) 0%,
+    rgba(130, 170, 255, 0.8) 50%,
+    var(--md-accent-fg-color) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  transition: background-position 0.3s ease;
+}
+
+.md-header__title:hover .md-header__topic:first-child {
+  background-position: right center;
+}
+
+/* Navigation Links
+   ========================================================================== */
+/* Primary Navigation */
+.md-nav__link {
+  position: relative;
+  transition: color 0.2s ease;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+}
+
+/* Elegant hover effect */
+.md-nav__link::before {
   content: '';
   position: absolute;
-  left: -0.5rem;
-  top: 0;
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(180deg, 
-    var(--md-accent-fg-color) 0%,
+  inset: 0;
+  border-radius: 4px;
+  background: radial-gradient(
+    circle at var(--x, 50%) var(--y, 50%),
+    var(--hover-accent-glow) 0%,
     transparent 100%
   );
   opacity: 0;
   transition: opacity 0.2s ease;
 }
 
-.md-nav--primary .md-nav__link:hover {
-  color: var(--md-accent-fg-color);
-}
-
-.md-nav--primary .md-nav__link:hover::before {
+.md-nav__link:hover::before {
   opacity: 1;
 }
 
-/* Section Headers in Navigation */
+/* Active link state */
+.md-nav__link--active {
+  color: var(--md-accent-fg-color);
+  background-color: var(--hover-bg-subtle);
+}
+
+/* Section Headers */
 .md-nav__item--section > .md-nav__link {
   font-weight: 600;
-  color: var(--md-default-fg-color--light);
-  background: linear-gradient(90deg,
-    transparent 0%,
-    var(--md-gradient-1) 50%,
-    transparent 100%
+  letter-spacing: 0.01em;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Section header hover effect */
+.md-nav__item--section > .md-nav__link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--md-accent-fg-color) 50%,
+    transparent
   );
-  background-size: 200% 100%;
-  transition: color 0.2s ease, background-position 0.3s ease;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
 }
 
-.md-nav__item--section > .md-nav__link:hover {
-  background-position: -100% 0;
+.md-nav__item--section > .md-nav__link:hover::after {
+  transform: scaleX(1);
 }
 
-/* Table of Contents */
+/* Content Links
+   ========================================================================== */
+.md-content__inner a:not(.md-button) {
+  position: relative;
+  color: var(--md-accent-fg-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+/* Underline effect */
+.md-content__inner a:not(.md-button)::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    var(--md-accent-fg-color),
+    rgba(130, 170, 255, 0.5)
+  );
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.md-content__inner a:not(.md-button):hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Table of Contents
+   ========================================================================== */
 .md-nav--secondary .md-nav__link {
   color: var(--md-typeset-color);
   transition: color 0.2s ease, background-color 0.2s ease;
   border-left: 2px solid transparent;
-  padding-left: 1rem;
-  margin: 0.25rem 0;
+  margin: 0.2rem 0;
+  padding: 0.2rem 0.8rem;
 }
 
 .md-nav--secondary .md-nav__link:hover {
   color: var(--md-accent-fg-color);
-  background-color: var(--md-gradient-1);
-}
-
-.md-nav--secondary .md-nav__link--active {
-  color: var(--md-accent-fg-color);
+  background-color: var(--hover-bg-subtle);
   border-left-color: var(--md-accent-fg-color);
-  background-color: var(--md-gradient-2);
 }
 
-/* Header and Navigation Bar
+/* Code Blocks
    ========================================================================== */
+.highlight {
+  position: relative;
+  border-radius: 6px;
+  background: linear-gradient(
+    135deg,
+    var(--hover-bg-subtle) 0%,
+    transparent 100%
+  );
+  border: 1px solid rgba(130, 170, 255, 0.1);
+}
 
-.md-header {
-  background-color: rgba(30, 32, 41, 0.95);
-  backdrop-filter: blur(12px);
-  box-shadow: 0 1px 0 rgba(130, 170, 255, 0.05);
+/* Code block hover effect */
+.highlight::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 6px;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    var(--md-accent-fg-color) 0%,
+    transparent 50%
+  );
+  mask: linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, 
+                linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  -webkit-mask-composite: xor;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.highlight:hover::before {
+  opacity: 0.3;
+}
+
+/* Copy Button */
+.md-clipboard {
+  opacity: 0.5;
+  transition: opacity 0.2s ease, background-color 0.2s ease;
+  border-radius: 4px;
+}
+
+.md-clipboard:hover {
+  opacity: 1;
+  background-color: var(--hover-bg-medium);
+}
+
+/* Tables
+   ========================================================================== */
+.md-typeset table:not([class]) {
+  background: linear-gradient(
+    to bottom,
+    var(--hover-bg-subtle),
+    transparent
+  );
+  border: 1px solid rgba(130, 170, 255, 0.1);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--hover-bg-medium);
+  border-bottom: 1px solid rgba(130, 170, 255, 0.1);
+}
+
+.md-typeset table:not([class]) tr {
   transition: background-color 0.2s ease;
 }
 
-/* Header Title */
-.md-header__title {
-  font-family: "Major Mono Display", monospace;
-  transition: color 0.2s ease;
+.md-typeset table:not([class]) tr:hover {
+  background-color: var(--hover-bg-subtle);
 }
 
-.md-header__title:hover {
-  color: var(--md-accent-fg-color);
-}
-
-/* Tabs Navigation */
-.md-tabs {
-  background-color: rgba(42, 44, 60, 0.95);
-  backdrop-filter: blur(12px);
-}
-
-.md-tabs__link {
-  opacity: 0.7;
-  transition: opacity 0.2s ease, color 0.2s ease;
-}
-
-.md-tabs__link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg,
-    transparent,
-    var(--md-accent-fg-color),
-    transparent
-  );
-  opacity: 0;
-  transition: opacity 0.2s ease;
-}
-
-.md-tabs__link:hover {
-  opacity: 1;
-  color: var(--md-accent-fg-color);
-}
-
-.md-tabs__link:hover::after {
-  opacity: 0.5;
-}
-
-.md-tabs__link--active {
-  opacity: 1;
-}
-
-.md-tabs__link--active::after {
-  opacity: 1;
-}
-
-/* Search Enhancements
+/* Search
    ========================================================================== */
-
-.md-search__inner {
-  background-color: rgba(26, 28, 35, 0.98);
-  backdrop-filter: blur(12px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(130, 170, 255, 0.05);
-}
-
 .md-search__form {
-  background-color: rgba(130, 170, 255, 0.05);
+  background-color: var(--hover-bg-subtle);
+  border-radius: 6px;
   transition: background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .md-search__form:hover {
-  background-color: rgba(130, 170, 255, 0.08);
+  background-color: var(--hover-bg-medium);
 }
 
 .md-search__form:focus-within {
-  background-color: rgba(130, 170, 255, 0.1);
+  background-color: var(--hover-bg-medium);
   box-shadow: inset 0 0 0 1px rgba(130, 170, 255, 0.2);
 }
 
@@ -214,254 +282,12 @@
   color: rgba(203, 213, 225, 0.6);
 }
 
-/* Search Results */
-.md-search-result__item {
-  background: linear-gradient(90deg,
-    transparent 50%,
-    var(--md-gradient-1) 50%
-  );
-  background-size: 200% 100%;
-  transition: background-position 0.3s ease;
-}
-
-.md-search-result__item:hover {
-  background-position: -100% 0;
-}
-
-/* Content Elements
+/* Top Navigation Tabs
    ========================================================================== */
-
-/* Code Blocks */
-.md-typeset pre > code {
-  border: 1px solid rgba(130, 170, 255, 0.1);
-  background: linear-gradient(135deg,
-    var(--md-gradient-1) 0%,
-    var(--md-gradient-2) 100%
-  );
-}
-
-/* Copy Button */
-.md-clipboard {
-  color: var(--md-default-fg-color--lighter);
-  transition: color 0.2s ease, background-color 0.2s ease;
-}
-
-.md-clipboard:hover {
-  color: var(--md-accent-fg-color);
-  background-color: var(--md-gradient-1);
-}
-
-/* Links */
-.md-content__inner a:not(.md-button) {
-  color: var(--md-typeset-a-color);
-  text-decoration: none;
-  background: none;
-  transition: color 0.2s ease;
-  position: relative;
-}
-
-.md-content__inner a:not(.md-button):hover {
-  color: var(--md-accent-fg-color);
-  background-size: 100% 100%;
-  filter: brightness(1.1);
-}
-
-/* Admonitions */
-.md-typeset .admonition {
-  border: none;
-  background: linear-gradient(135deg,
-    var(--md-gradient-1) 0%,
-    var(--md-gradient-2) 100%
-  );
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.2s ease;
-}
-
-.md-typeset .admonition:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15),
-              0 0 0 1px rgba(130, 170, 255, 0.1);
-}
-
-/* Tables */
-.md-typeset table:not([class]) {
-  background: linear-gradient(135deg,
-    var(--md-gradient-2) 0%,
-    transparent 100%
-  );
-  border: 1px solid rgba(130, 170, 255, 0.1);
-}
-
-.md-typeset table:not([class]) th {
-  background-color: rgba(130, 170, 255, 0.08);
-  border-bottom: 1px solid rgba(130, 170, 255, 0.1);
-}
-
-.md-typeset table:not([class]) tr {
-  transition: background-color 0.2s ease;
-}
-
-.md-typeset table:not([class]) tr:hover {
-  background-color: var(--md-gradient-1);
-}
-
-/* Footer Enhancement
-   ========================================================================== */
-
-.md-footer {
-  background-color: rgba(22, 23, 29, 0.95);
-  backdrop-filter: blur(12px);
-}
-
-.md-footer-meta {
-  background-color: rgba(18, 19, 26, 0.98);
-}
-
-/* Scrollbar Styling
-   ========================================================================== */
-
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: rgba(130, 170, 255, 0.05);
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(130, 170, 255, 0.2);
-  border-radius: 3px;
-  transition: background-color 0.2s ease;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(130, 170, 255, 0.3);
-}
-
-/* Selection Styling
-   ========================================================================== */
-
-::selection {
-  background: rgba(130, 170, 255, 0.2);
-  color: #fff;
-}
-
-/* Focus States
-   ========================================================================== */
-
-:focus-visible {
-  outline: 2px solid rgba(130, 170, 255, 0.5);
-  outline-offset: 2px;
-}
-
-/* Print Optimization
-   ========================================================================== */
-
-@media print {
-  [data-md-color-scheme="slate"] {
-    --md-default-bg-color: #ffffff;
-    --md-default-fg-color: #000000;
-    --md-typeset-a-color: #0056b3;
-  }
-  
-  .md-typeset a {
-    color: var(--md-typeset-a-color) !important;
-    text-decoration: underline;
-  }
-}
-
-Refined navigation and menu CSS
-/* Refined Navigation and Menu Styling */
-
-/* Fix link hover appearance */
-.md-content__inner a:not(.md-button) {
-  color: var(--md-typeset-a-color);
-  text-decoration: none;
-  background: none;
-  transition: color 0.2s ease;
-  position: relative;
-}
-
-.md-content__inner a:not(.md-button)::after {
-  content: '';
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background-color: var(--md-accent-fg-color);
-  opacity: 0.3;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-  transform: scaleX(0);
-  transform-origin: left;
-}
-
-.md-content__inner a:not(.md-button):hover {
-  color: var(--md-accent-fg-color);
-}
-
-.md-content__inner a:not(.md-button):hover::after {
-  opacity: 1;
-  transform: scaleX(1);
-}
-
-/* Fix left navigation menu */
-.md-nav--primary .md-nav__link {
-  color: var(--md-typeset-color);
-  transition: color 0.2s ease, background-color 0.2s ease;
-  padding: 0.2rem 0.5rem;
-  margin: 0.1rem 0;
-  border-radius: 3px;
-}
-
-.md-nav--primary .md-nav__link:hover {
-  color: var(--md-accent-fg-color);
-  background-color: rgba(130, 170, 255, 0.05);
-}
-
-.md-nav--primary .md-nav__link--active {
-  color: var(--md-accent-fg-color);
-  background-color: rgba(130, 170, 255, 0.07);
-}
-
-/* Fix table of contents */
-.md-nav--secondary {
-  padding-left: 0;
-}
-
-.md-nav--secondary .md-nav__list {
-  padding-left: 0;
-}
-
-.md-nav--secondary .md-nav__link {
-  color: var(--md-default-fg-color--light);
-  transition: color 0.2s ease, background-color 0.2s ease;
-  padding: 0.2rem 0.5rem;
-  margin: 0.1rem 0;
-  border-radius: 3px;
-  font-size: 0.7rem;
-}
-
-.md-nav--secondary .md-nav__link:hover {
-  color: var(--md-accent-fg-color);
-  background-color: rgba(130, 170, 255, 0.05);
-}
-
-.md-nav--secondary .md-nav__link--active {
-  color: var(--md-accent-fg-color);
-  background-color: rgba(130, 170, 255, 0.07);
-}
-
-/* Top Navigation Bar */
 .md-tabs__link {
+  position: relative;
   opacity: 0.7;
   transition: opacity 0.2s ease, color 0.2s ease;
-  position: relative;
-}
-
-.md-tabs__link:hover {
-  opacity: 1;
-  color: var(--md-accent-fg-color);
 }
 
 .md-tabs__link::after {
@@ -471,152 +297,82 @@ Refined navigation and menu CSS
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: var(--md-accent-fg-color);
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--md-accent-fg-color) 50%,
+    transparent
+  );
   transform: scaleX(0);
-  transition: transform 0.2s ease;
-  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.md-tabs__link:hover {
+  opacity: 1;
+  color: var(--md-accent-fg-color);
 }
 
 .md-tabs__link:hover::after {
   transform: scaleX(1);
 }
 
-.md-tabs__link--active {
-  opacity: 1;
+/* Admonitions
+   ========================================================================== */
+.md-typeset .admonition {
+  border: none;
+  background: var(--hover-bg-subtle);
+  border-radius: 6px;
+  transition: box-shadow 0.3s ease;
 }
 
-.md-tabs__link--active::after {
-  transform: scaleX(1);
+.md-typeset .admonition:hover {
+  box-shadow: 0 0 0 1px rgba(130, 170, 255, 0.1),
+              0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Add subtle hover effect to sections */
-.md-nav__item--section > .md-nav__link {
-  font-weight: 600;
-  background: none;
-  transition: color 0.2s ease;
-  position: relative;
-  overflow: hidden;
+/* Icons
+   ========================================================================== */
+.md-typeset .admonition-title::before,
+.md-nav__button.md-logo img {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.md-nav__item--section > .md-nav__link::before {
-  content: '';
-  position: absolute;
-  left: -0.5rem;
-  top: 50%;
-  width: 0.25rem;
-  height: 0;
-  background-color: var(--md-accent-fg-color);
-  opacity: 0;
-  transition: height 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
-  transform: translateY(-50%);
+.md-typeset .admonition:hover .admonition-title::before,
+.md-nav__button.md-logo:hover img {
+  transform: scale(1.1);
 }
 
-.md-nav__item--section > .md-nav__link:hover::before {
-  height: 70%;
-  opacity: 0.5;
-}
-
-/* Header Refinements */
-.md-header {
-  background-color: rgba(30, 32, 41, 0.95);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-/* Add subtle animations to list items */
-.md-nav__list .md-nav__item {
-  transition: background-color 0.2s ease;
-}
-
-/* Enhance code blocks */
-.highlight {
-  position: relative;
-  background: rgba(130, 170, 255, 0.03);
-  border: 1px solid rgba(130, 170, 255, 0.1);
-  border-radius: 4px;
-}
-
-.highlight::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    45deg,
-    transparent 0%,
-    rgba(130, 170, 255, 0.03) 50%,
-    transparent 100%
-  );
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.highlight:hover::before {
-  opacity: 1;
-}
-
-/* Byzantine Protocol title styling */
-.md-header__topic:first-child {
-  font-family: "Major Mono Display", monospace;
-  letter-spacing: 0.05em;
-  background: linear-gradient(
-    120deg,
-    #82AAFF 0%,
-    rgba(130, 170, 255, 0.8) 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
-}
-
-/* Enhance tables */
-.md-typeset table:not([class]) {
-  background: linear-gradient(
-    to bottom,
-    rgba(130, 170, 255, 0.03),
-    transparent
-  );
-  border: 1px solid rgba(130, 170, 255, 0.1);
-  border-radius: 4px;
-}
-
-.md-typeset table:not([class]) th {
-  background-color: rgba(130, 170, 255, 0.05);
-  border-bottom: 1px solid rgba(130, 170, 255, 0.1);
-}
-
-.md-typeset table:not([class]) tr {
-  transition: background-color 0.2s ease;
-}
-
-.md-typeset table:not([class]) tr:hover {
-  background-color: rgba(130, 170, 255, 0.03);
-}
-
-/* General text selection */
-::selection {
-  background: rgba(130, 170, 255, 0.2);
-  color: #fff;
-}
-
-/* Scrollbar styling */
+/* Scrollbar Styling
+   ========================================================================== */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(130, 170, 255, 0.03);
+  background: rgba(130, 170, 255, 0.05);
 }
 
 ::-webkit-scrollbar-thumb {
   background: rgba(130, 170, 255, 0.1);
   border-radius: 4px;
+  transition: background-color 0.2s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(130, 170, 255, 0.2);
+}
+
+/* Selection Styling
+   ========================================================================== */
+::selection {
+  background: rgba(130, 170, 255, 0.2);
+  color: #fff;
+}
+
+/* Focus States
+   ========================================================================== */
+:focus-visible {
+  outline: 2px solid var(--md-accent-fg-color);
+  outline-offset: 2px;
 }
