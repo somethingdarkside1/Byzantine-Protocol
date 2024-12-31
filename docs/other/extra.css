@@ -149,7 +149,7 @@
    ========================================================================== */
 
 .md-header {
-  background-color: rgba(12, 12, 29, 0.95);
+  background-color: rgba(12, 12, 29, 0.4);
   backdrop-filter: blur(12px);
   box-shadow: 0 1px 0 rgba(130, 170, 255, 0.05);
   border-bottom: 1px solid rgba(130, 170, 255, 0.05);
@@ -261,6 +261,8 @@
   background-color: rgba(12, 12, 29, 0.95);
   backdrop-filter: blur(16px);
 }
+
+md-search__inner:hover {transition: all 1s ease}
 
 .md-search__form {
   background-color: rgba(130, 170, 255, 0.05);
