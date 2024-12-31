@@ -12,7 +12,7 @@
   --md-primary-fg-color--dark: #08080f;
   --md-accent-fg-color: #82AAFF;
   --md-accent-fg-color--transparent: rgba(130, 170, 255, 0.1);
-  --md-default-bg-color: ;
+  --md-default-bg-color: #0c0c1d;
   --md-default-bg-color--light: rgba(12, 12, 29, 0.54);
   --md-typeset-color: #E1E7F0;
   
@@ -139,7 +139,6 @@
   opacity: 0.5;
 }
 
-.md-search__overlay { opacity: 0.1;}
 
 .md-tabs__link--active::after {
   transform: scaleX(1);
@@ -284,8 +283,6 @@ md-search__inner:hover {transition: all 1s ease}
   outline: 2px solid rgba(130, 170, 255, 0.5);
   outline-offset: 2px;
 }
-
-.md-typeset h1 {color: #fff}
 
 
 /* ==========================================================================
