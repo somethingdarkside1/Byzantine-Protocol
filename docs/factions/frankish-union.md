@@ -50,7 +50,7 @@ The Union's relationship with North Africa deepened through the 19th century. Th
 
 The Constantinople Exchange Program, established in 1930, facilitated unprecedented cooperation between Frankish and Byzantine scholars. This partnership proved particularly fruitful in developing natural science theories that would later evolve both societies.
 
-### Modern Governmental Structure (1950-)
+### Modern Governmental Structure
 Today's Frankish Union operates under the Frankish Constitutional System of 1950, a sophisticated framework that balances traditional authority with scientific advancement. The Sovereign, heir to both Plantagenet and Capetian legacies, serves as constitutional monarch and patron of the sciences.
 
 The Frankish Parliament, housed in the Grand Cathedral of Reims, combines democratic representation and a deep focus on human-centric research. The High Council coordinates the development of the Union, while the Scientific Senate provides expert oversight of technological advancement. The Environmental Directorate manages the complex interactions between human civilization and natural systems.
@@ -59,7 +59,7 @@ Regional autonomy remains strong, with each territory maintaining its distinct c
 
 Regional autonomy remains strong, with each territory maintaining its distinct research focus and cultural character. The Northern Provinces excel in atmospheric studies and climate control, while the Mediterranean territories pioneer integration of ancient wisdom with modern advancement. The Atlantic regions lead in marine science and oceanic engineering, maintaining the Union's historic maritime traditions.
 
-### The Cultural Sphere (2050-2088)
+# The Cultural Sphere (2050-2088)
 
 Modern Frankish culture represents a unique synthesis of tradition and innovation. The great universities continue their specialized roles while maintaining constant collaboration. Oxford's empirical rigor combines with the Sorbonne's theoretical brilliance and Montpellier's practical expertise to drive continuous advancement, focusing on environmental and natural sciences.
 
