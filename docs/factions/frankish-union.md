@@ -2,11 +2,11 @@
 
 ## History
 
-### Early Formation (1204-1350)
+### Early Formation
 
 The pivotal moment in Western European history came with the [Fourth Crusade](4th-crusade.md)'s diversion from Constantinople to Egypt. As the Byzantine Empire maintained its power in the East, the balance of European politics shifted dramatically. The Plantagenet dynasty, recognizing these changing dynamics, initiated a series of diplomatic ventures with the French crown that would reshape the continent.
 
-### Henry III of England
+**Henry III of England**
 Henry III (1268-1322) was King of England and Lord of Ireland from 1305 to 1322. Born in 1272 as the second son of Edward I and Eleanor of Castile, Henry was not initially expected to inherit the throne. A severe illness in 1284 nearly claimed his life, but he recovered under the care of Jacob of Oxford, a Jewish physician. The same outbreak claimed his elder brother, making Henry the heir apparent.
 
 Henry's education, overseen primarily by his grandmother Eleanor of Provence, focused heavily on administrative and diplomatic training rather than military matters. He became fluent in French, Latin, and Greek, and regularly participated in diplomatic missions to continental courts by his teenage years.
@@ -89,6 +89,7 @@ The southern regions, particularly the Spanish territories, maintain distinct cu
 
 ### Military Reality
 While officially focused on "defensive research," the Union maintains significant capabilities through biological containment systems, environmental control weapons, enhanced troops (though officially denied), and extensive surveillance networks.
+
 
 # Current Challenges (2088)
 ## Internal Tensions
