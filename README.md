@@ -14,9 +14,8 @@ Choose your path:
 
 ## In this alternate history cyberpunk RPG, you'll:
 
-- Manipulate experimental quantum technology
-- Explore living cities and orbital colonies
-- Engage in technological espionage
+- Leverage experimental technology
+- Build living cities and orbital colonies
 - Navigate complex political intrigue
 - Race to unlock humanity's next breakthrough
 
@@ -43,14 +42,10 @@ Game scenarios and campaigns
 Additional resources
 
 ## Contribution Guidelines
-We welcome contributions that enhance the game while maintaining its core themes and balance. Please review our Contribution Guide before submitting:
+I welcome contributions that enhance the game while maintaining its core themes and balance.
 
 ## License
-This work is released under dual-licensing:
-
-### Commercial License
-All commercial rights are exclusively reserved by the copyright holder. Any commercial use, adaptation, or distribution requires explicit written permission from Vitali Liouti.
-Copyright (c) 2025 Vitali Liouti. All rights reserved.
+This work is released under dual-licensing. More information can be found in the [License](license.md) page.
 
 ### Creative Commons License
 For non-commercial use only, this work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0). To view a copy of this license, visit: https://creativecommons.org/licenses/by-nc-sa/4.0/
@@ -62,27 +57,20 @@ Under this license you are free to:
 
 Under the following terms:
 
-* Attribution — You must give appropriate credit to Vitali Liouti, provide a link to the license, and indicate if changes were made.
+* Attribution — You must give appropriate credit to the author, provide a link to the license, and indicate if changes were made.
 * NonCommercial — You may not use the material for commercial purposes.
 * ShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license.
 
-Contact
-For commercial licensing inquiries, please contact Vitali Liouti.
+### Commercial License
+All commercial rights are exclusively reserved by the copyright holder. Any commercial use, adaptation, or distribution requires explicit written permission.
 
 ### Q: What makes this setting unique?
 A: BYZANTINE PROTOCOL combines alternate history with technological advancement, focusing on competition through innovation rather than conflict. The survival of the Byzantine Empire creates a dramatically different 2088.
 
-### Q: How does technology work in the setting?
-A: Technology in 2088 is advanced but not magical:
-
-- Quantum computing allows reality observation
-- Living architecture is emerging
-- Space elevators near completion
-- Neural interfaces common
-- Full reality manipulation still experimental
-
-### Q: Can I create my own content?
-A: Yes.
-
 ## Version History
 0.1: Initial release
+
+## Contact
+For any inquiries, please contact [the author](vitali@byzantineprotocol.com).
+
+Copyright (c) 2025-2026 Vitali Liouti. All rights reserved.
