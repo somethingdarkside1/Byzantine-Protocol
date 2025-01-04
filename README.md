@@ -1,7 +1,7 @@
-# Trinity-Protocol
+# Byzantine Protocol
 A card RPG of technological advancement, cultural power, and reality-shaping ambition in an alternate 2088 where the Byzantine Empire never fell.
 
-## TRINITY PROTOCOL
+## BYZANTINE PROTOCOL
 ### Shape Reality. Choose Your Power. Define Tomorrow.
 
 In 2088, three ancient powers compete not through warfare, but through technological supremacy, cultural dominance, and the race for space. As quantum computing warps reality, living cities grow toward the stars, and humanity's consciousness expands beyond its limits, you'll navigate a world where the future and past collide.
@@ -21,35 +21,56 @@ Choose your path:
 - Race to unlock humanity's next breakthrough
 
 The future isn't decided by bullets and bombs, but by brilliant innovations, cultural influence, and the drive to push humanity's boundaries. In a world where ancient empires never fell but instead evolved, your choices will shape not just who wins, but what humanity becomes.
-TRINITY PROTOCOL: The future has ancient roots.
 
 ## Repository Structure
-trinity-protocol/
-├── Cards/              # All card and card properties
-├── Systems/            # Core rule documents
-├── Lore/               # Setting and background
-├── Characters/         # Character creation guides
-├── Scenarios/          # Game scenarios and campaigns
-├── Resources/          # Additional resources
+byzantine-protocol/  
+├── Cards/  
+All card and card properties
+
+├── Systems  
+Core rule documents
+
+├── Lore/  
+Setting and background
+
+├── Characters/  
+Character creation guides
+
+├── Scenarios/  
+Game scenarios and campaigns
+
+├── Resources/  
+Additional resources
 
 ## Contribution Guidelines
 We welcome contributions that enhance the game while maintaining its core themes and balance. Please review our Contribution Guide before submitting:
 
 ## License
-This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)
-You are free to:
+This work is released under dual-licensing:
 
-- Share: Copy and redistribute the material in any medium or format
-- Adapt: Remix, transform, and build upon the material
+### Commercial License
+All commercial rights are exclusively reserved by the copyright holder. Any commercial use, adaptation, or distribution requires explicit written permission from Vitali Liouti.
+Copyright (c) 2025 Vitali Liouti. All rights reserved.
+
+### Creative Commons License
+For non-commercial use only, this work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0). To view a copy of this license, visit: https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+Under this license you are free to:
+
+* Share — copy and redistribute the material in any medium or format
+* Adapt — remix, transform, and build upon the material
 
 Under the following terms:
 
-- Attribution: Credit the original creation
-- NonCommercial: No commercial use
-- ShareAlike: Share adaptations under same license
+* Attribution — You must give appropriate credit to Vitali Liouti, provide a link to the license, and indicate if changes were made.
+* NonCommercial — You may not use the material for commercial purposes.
+* ShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license.
+
+Contact
+For commercial licensing inquiries, please contact Vitali Liouti.
 
 ### Q: What makes this setting unique?
-A: TRINITY PROTOCOL combines alternate history with technological advancement, focusing on competition through innovation rather than conflict. The survival of the Byzantine Empire creates a dramatically different 2088.
+A: BYZANTINE PROTOCOL combines alternate history with technological advancement, focusing on competition through innovation rather than conflict. The survival of the Byzantine Empire creates a dramatically different 2088.
 
 ### Q: How does technology work in the setting?
 A: Technology in 2088 is advanced but not magical:
@@ -62,18 +83,6 @@ A: Technology in 2088 is advanced but not magical:
 
 ### Q: Can I create my own content?
 A: Yes.
-
-### Q: How lethal is the game?
-A: TRINITY PROTOCOL focuses on competition through advancement rather than combat. Conflict exists but centers on:
-
-- Technological races
-- Cultural influence
-- Resource control
-- Knowledge acquisition
-- Strategic positioning
-
-## Acknowledgments
-TRINITY PROTOCOL is created by Vitali Liouti.
 
 ## Version History
 0.1: Initial release
