@@ -21,9 +21,10 @@ The full text of the CC BY-NC-SA 4.0 license can be found at: https://creativeco
 
 ## Commercial Rights
 
-All commercial rights are exclusively reserved by Vitali Liouti, including any commercial use of the work, concept, characters, and universe. No commercial use of this work is permitted without explicit written permission. 
+All commercial rights are exclusively reserved by the author, including any commercial use of the work, concept, characters, and universe. No commercial use of this work is permitted without explicit written permission. 
 
 # Contact
 
 For any enquiries, please contact [the author](mailto:vitali@byzantineprotocol.com)
-Copyright © 2025 Vitali Liouti. All rights reserved.
+
+Copyright © 2025-2026 Vitali Liouti. All rights reserved.
