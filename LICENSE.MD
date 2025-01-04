@@ -13,7 +13,7 @@ You are free to:
 
 Under the following terms:
 
-* Attribution — You must give appropriate credit to Vitali Liouti, provide a link to the license, and indicate if changes were made.
+* Attribution — You must give appropriate credit to the original author, provide a link to the license, and indicate if changes were made.
 * NonCommercial — You may not use the material for commercial purposes.
 * ShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
 
@@ -25,7 +25,5 @@ All commercial rights are exclusively reserved by Vitali Liouti, including any c
 
 # Contact
 
-For any enquiries, please contact Vitali Liouti.
-
-
+For any enquiries, please contact [the author](mailto:vitali@byzantineprotocol.com)
 Copyright © 2025 Vitali Liouti. All rights reserved.
