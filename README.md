@@ -68,7 +68,7 @@ All commercial rights are exclusively reserved by the copyright holder. Any comm
 A: BYZANTINE PROTOCOL combines alternate history with technological advancement, focusing on competition through innovation rather than conflict. The survival of the Byzantine Empire creates a dramatically different 2088.
 
 ## Version History
-0.1: Initial release
+0.1: Current Draft
 
 ## Contact
 For any inquiries, please contact [the author](vitali@byzantineprotocol.com).
